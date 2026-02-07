@@ -20,6 +20,26 @@ CAPITAL_PF is a frontend UI kit / design prototype for a financial portfolio man
 
 ## Screenshots
 
+### Ana Görsel
+![Portfolio Terminal UI](capital_pf/1259369_Image0.jpeg)
+
+### Tüm Sayfalar
+| Sayfa 1 | Sayfa 2 | Sayfa 3 |
+|---------|---------|---------|
+| ![Sayfa 1](capital_pf/_Users_ismailoktaydak_Developer_sanat_index.html.png) | ![Sayfa 2](capital_pf/_Users_ismailoktaydak_Developer_sanat_index.html%20%281%29.png) | ![Sayfa 3](capital_pf/_Users_ismailoktaydak_Developer_sanat_index.html%20%282%29.png) |
+
+| Sayfa 4 | Sayfa 5 | Sayfa 6 |
+|---------|---------|---------|
+| ![Sayfa 4](capital_pf/_Users_ismailoktaydak_Developer_sanat_index.html%20%283%29.png) | ![Sayfa 5](capital_pf/_Users_ismailoktaydak_Developer_sanat_index.html%20%284%29.png) | ![Sayfa 6](capital_pf/_Users_ismailoktaydak_Developer_sanat_index.html%20%285%29.png) |
+
+| Sayfa 7 | Sayfa 8 | Sayfa 9 |
+|---------|---------|---------|
+| ![Sayfa 7](capital_pf/_Users_ismailoktaydak_Developer_sanat_index.html%20%286%29.png) | ![Sayfa 8](capital_pf/_Users_ismailoktaydak_Developer_sanat_index.html%20%287%29.png) | ![Sayfa 9](capital_pf/_Users_ismailoktaydak_Developer_sanat_index.html%20%288%29.png) |
+
+| Sayfa 10 | Sayfa 11 | Sayfa 12 |
+|----------|----------|----------|
+| ![Sayfa 10](capital_pf/_Users_ismailoktaydak_Developer_sanat_index.html%20%289%29.png) | ![Sayfa 11](capital_pf/_Users_ismailoktaydak_Developer_sanat_index.html%20%2810%29.png) | ![Sayfa 12](capital_pf/_Users_ismailoktaydak_Developer_sanat_index.html%20%2811%29.png) |
+
 Open `index.html` in your browser to see the full UI in action.
 
 ---
