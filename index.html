@@ -1,0 +1,2826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAPITAL_PF // PORTFOLIO TERMINAL</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- NAVIGATION -->
+<!-- ═══════════════════════════════════════════ -->
+<nav class="nav-bar">
+  <div class="nav-logo">
+    <div class="nav-logo-icon">
+      <span></span><span></span><span></span><span></span>
+    </div>
+    CAPITAL_PF
+    <span class="nav-version">V1.0.4</span>
+  </div>
+
+  <div class="nav-tabs">
+    <button class="nav-tab active" onclick="showPage('welcome')">
+      <span class="nav-tab-index">01</span> WELCOME
+    </button>
+    <button class="nav-tab" onclick="showPage('login')">
+      <span class="nav-tab-index">02</span> LOGIN
+    </button>
+    <button class="nav-tab" onclick="showPage('register')">
+      <span class="nav-tab-index">03</span> REGISTER
+    </button>
+    <button class="nav-tab" onclick="showPage('dashboard')">
+      <span class="nav-tab-index">04</span> DASHBOARD
+    </button>
+    <button class="nav-tab" onclick="showPage('explore')">
+      <span class="nav-tab-index">05</span> EXPLORE
+    </button>
+    <button class="nav-tab" onclick="showPage('wallet')">
+      <span class="nav-tab-index">06</span> WALLET
+    </button>
+    <button class="nav-tab" onclick="showPage('profile')">
+      <span class="nav-tab-index">07</span> PROFILE
+    </button>
+    <button class="nav-tab" onclick="showPage('project')">
+      <span class="nav-tab-index">08</span> PROJECT
+    </button>
+    <button class="nav-tab" onclick="showPage('deposit')">
+      <span class="nav-tab-index">09</span> DEPOSIT
+    </button>
+    <button class="nav-tab" onclick="showPage('withdraw')">
+      <span class="nav-tab-index">10</span> WITHDRAW
+    </button>
+    <button class="nav-tab" onclick="showPage('error')">
+      <span class="nav-tab-index">11</span> ERROR
+    </button>
+    <button class="nav-tab" onclick="showPage('success')">
+      <span class="nav-tab-index">12</span> SUCCESS
+    </button>
+    <button class="nav-tab" onclick="showPage('search')">
+      <span class="nav-tab-index">13</span> SEARCH
+    </button>
+    <button class="nav-tab" onclick="showPage('filters')">
+      <span class="nav-tab-index">14</span> FILTERS
+    </button>
+    <button class="nav-tab" onclick="showPage('notifications')">
+      <span class="nav-tab-index">15</span> FEED
+    </button>
+    <button class="nav-tab" onclick="showPage('news')">
+      <span class="nav-tab-index">16</span> NEWS
+    </button>
+  </div>
+
+  <div class="nav-status">
+    <span>SYSTEM ACTIVE</span>
+    <span class="nav-status-dot"></span>
+    <span>ENCRYPTION: ON</span>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- TICKER -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="ticker">
+  <div class="ticker-inner">
+    /// TRADE /// GROW /// HEDGE /// TRACK /// TRADE /// GROW /// HEDGE /// TRACK /// TRADE /// GROW /// HEDGE /// TRACK /// TRADE /// GROW /// HEDGE /// TRACK /// TRADE /// GROW /// HEDGE /// TRACK /// TRADE /// GROW /// HEDGE /// TRACK /// TRADE /// GROW /// HEDGE /// TRACK /// TRADE /// GROW /// HEDGE /// TRACK ///&nbsp;&nbsp;&nbsp;
+    /// TRADE /// GROW /// HEDGE /// TRACK /// TRADE /// GROW /// HEDGE /// TRACK /// TRADE /// GROW /// HEDGE /// TRACK /// TRADE /// GROW /// HEDGE /// TRACK /// TRADE /// GROW /// HEDGE /// TRACK /// TRADE /// GROW /// HEDGE /// TRACK /// TRADE /// GROW /// HEDGE /// TRACK /// TRADE /// GROW /// HEDGE /// TRACK ///
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- PAGES -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="pages-wrapper">
+
+  <!-- PAGE 1: WELCOME -->
+  <div class="page active" id="page-welcome">
+    <div class="welcome-page">
+      <div class="welcome-grid-bg"></div>
+      <div class="scanlines"></div>
+      <div class="welcome-noise"></div>
+
+      <div class="corner-mark tl">[ 0,0 ]</div>
+      <div class="corner-mark tr">[ 1920,0 ]</div>
+      <div class="corner-mark bl">[ 0,1080 ]</div>
+      <div class="corner-mark br">[ 1920,1080 ]</div>
+
+      <!-- Brutal Header Strip -->
+      <div class="welcome-strip">
+        <div class="welcome-strip-left">
+          <span class="welcome-strip-dot"></span>
+          SYS_ONLINE
+        </div>
+        <div class="welcome-strip-center">CAPITAL_PF // TERMINAL V.02</div>
+        <div class="welcome-strip-right">
+          <span>SESSION: <span style="color: var(--green);">ACTIVE</span></span>
+          <span>LATENCY: 4MS</span>
+          <span>NODE: EU-WEST</span>
+        </div>
+      </div>
+
+      <div class="welcome-content">
+        <div class="welcome-left">
+
+          <!-- Glitch Title -->
+          <div class="welcome-pretitle">
+            <span class="welcome-line-accent"></span>
+            FINANCIAL OPERATING SYSTEM
+          </div>
+
+          <h1 class="welcome-title" data-text="TRADE PORTFOLIO">
+            <span>TRADE</span>
+            <span class="t-green">PORT</span>
+            <span class="t-outline">FOLIO</span>
+          </h1>
+
+          <div class="welcome-title-echo">TRADE PORTFOLIO</div>
+
+          <p class="welcome-subtitle">
+            ACCESS YOUR PORTFOLIO DASHBOARD.<br>
+            TRACK ASSETS. ANALYZE RETURNS.<br>
+            MAXIMIZE YOUR GROWTH POTENTIAL.
+          </p>
+
+          <!-- Brutal Stats Inline -->
+          <div class="welcome-brutal-stats">
+            <div class="welcome-brutal-stat">
+              <div class="welcome-brutal-stat-val">$2.4B</div>
+              <div class="welcome-brutal-stat-label">TOTAL VOLUME</div>
+            </div>
+            <div class="welcome-brutal-stat-divider"></div>
+            <div class="welcome-brutal-stat">
+              <div class="welcome-brutal-stat-val" style="color: var(--green);">+18.3%</div>
+              <div class="welcome-brutal-stat-label">AVG RETURN</div>
+            </div>
+            <div class="welcome-brutal-stat-divider"></div>
+            <div class="welcome-brutal-stat">
+              <div class="welcome-brutal-stat-val">24/7</div>
+              <div class="welcome-brutal-stat-label">UPTIME</div>
+            </div>
+          </div>
+
+          <div class="welcome-cta">
+            <button class="btn-primary-brutal" onclick="showPage('register')">
+              <span class="btn-brutal-text">START TRACKING</span>
+              <span class="btn-brutal-arrow">→</span>
+            </button>
+            <button class="btn-secondary-brutal" onclick="showPage('login')">
+              LOG IN
+            </button>
+          </div>
+
+          <div class="welcome-trust-line">
+            <span class="welcome-trust-dot"></span>
+            256-BIT ENCRYPTED // BANK-GRADE SECURITY // SOC2 COMPLIANT
+          </div>
+
+        </div>
+
+        <div class="welcome-right">
+          <!-- Big Number Display -->
+          <div class="welcome-big-number">
+            <div class="welcome-big-number-label">PORTFOLIO OVERVIEW // Q4</div>
+            <div class="welcome-big-number-value">$84,230</div>
+            <div class="welcome-big-number-change">
+              <span class="welcome-change-up">▲ +124%</span>
+              <span class="welcome-change-period">VS LAST QUARTER</span>
+            </div>
+          </div>
+
+          <!-- Chart -->
+          <div class="chart-container">
+            <div class="chart-header">
+              <span class="chart-label">PERFORMANCE GRAPH // 6M</span>
+              <div class="chart-live-indicator">
+                <span class="chart-live-dot"></span>
+                LIVE
+              </div>
+            </div>
+
+            <div class="chart-bars">
+              <div class="chart-bar-group">
+                <div class="chart-bar bar-green" style="height: 40%" data-val="$12K"></div>
+                <span class="chart-bar-label">JAN</span>
+              </div>
+              <div class="chart-bar-group">
+                <div class="chart-bar bar-green" style="height: 70%" data-val="$28K"></div>
+                <span class="chart-bar-label">FEB</span>
+              </div>
+              <div class="chart-bar-group">
+                <div class="chart-bar bar-red" style="height: 35%" data-val="$10K"></div>
+                <span class="chart-bar-label">MAR</span>
+              </div>
+              <div class="chart-bar-group">
+                <div class="chart-bar bar-green" style="height: 90%" data-val="$42K"></div>
+                <span class="chart-bar-label">APR</span>
+              </div>
+              <div class="chart-bar-group">
+                <div class="chart-bar bar-green" style="height: 75%" data-val="$34K"></div>
+                <span class="chart-bar-label">MAY</span>
+              </div>
+              <div class="chart-bar-group">
+                <div class="chart-bar bar-green" style="height: 55%" data-val="$20K"></div>
+                <span class="chart-bar-label">JUN</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stats Grid -->
+          <div class="stats-row">
+            <div class="stat-card">
+              <div class="stat-card-label">POSITIONS</div>
+              <div class="stat-card-value">12</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card-label">WIN RATE</div>
+              <div class="stat-card-value" style="color: var(--green);">87%</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card-label">RISK</div>
+              <div class="stat-card-value" style="color: var(--orange);">MED</div>
+            </div>
+          </div>
+
+          <!-- Terminal Log Preview -->
+          <div class="welcome-terminal">
+            <div class="welcome-terminal-line"><span class="wt-green">></span> SYSTEM INITIALIZED...</div>
+            <div class="welcome-terminal-line"><span class="wt-green">></span> CONNECTING TO MARKET FEED...</div>
+            <div class="welcome-terminal-line"><span class="wt-green">></span> 12 ACTIVE POSITIONS LOADED</div>
+            <div class="welcome-terminal-line"><span class="wt-green">></span> PORTFOLIO STATUS: <span class="wt-green">HEALTHY</span></div>
+            <div class="welcome-terminal-line wt-blink"><span class="wt-green">></span> AWAITING INPUT_</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Brutal Ticker -->
+      <div class="welcome-bottom-ticker">
+        <div class="ticker-track">
+          /// TRADE /// GROW /// HEDGE /// TRACK /// BUILD /// EARN /// TRADE /// GROW /// HEDGE /// TRACK /// BUILD /// EARN /// TRADE /// GROW /// HEDGE /// TRACK /// BUILD /// EARN /// TRADE /// GROW /// HEDGE /// TRACK /// BUILD /// EARN ///&nbsp;&nbsp;&nbsp;
+          /// TRADE /// GROW /// HEDGE /// TRACK /// BUILD /// EARN /// TRADE /// GROW /// HEDGE /// TRACK /// BUILD /// EARN /// TRADE /// GROW /// HEDGE /// TRACK /// BUILD /// EARN /// TRADE /// GROW /// HEDGE /// TRACK /// BUILD /// EARN ///
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 2: LOGIN -->
+  <div class="page" id="page-login">
+    <div class="login-page">
+      <div class="scanlines"></div>
+
+      <div class="security-ticker">
+        <div class="ticker-track">
+          // SYSTEM SECURE // ENCRYPTION: ACTIVE // MARKET STATUS: OPEN // NODE: EU-WEST-3 // LATENCY: 12MS // UPTIME: 99.97% // PROTOCOL: TLS 1.3 // FIREWALL: ACTIVE // AUTH: MULTI-FACTOR // SESSION: ENCRYPTED //&nbsp;&nbsp;&nbsp;
+          // SYSTEM SECURE // ENCRYPTION: ACTIVE // MARKET STATUS: OPEN // NODE: EU-WEST-3 // LATENCY: 12MS // UPTIME: 99.97% // PROTOCOL: TLS 1.3 // FIREWALL: ACTIVE // AUTH: MULTI-FACTOR // SESSION: ENCRYPTED //
+        </div>
+      </div>
+
+      <div class="login-layout">
+        <div class="login-side-left">
+          <div class="login-side-decoration">
+> INITIALIZING SECURE CONNECTION...
+> VERIFYING SSL CERTIFICATE... OK
+> LOADING ENCRYPTION MODULES... OK
+> ESTABLISHING TUNNEL... OK
+> AUTH SERVER: ONLINE
+> DATABASE: CONNECTED
+> MARKET FEED: ACTIVE
+>
+> READY FOR AUTHENTICATION
+> AWAITING USER INPUT...
+<span class="blink-cursor"></span>
+          </div>
+        </div>
+
+        <div class="login-center">
+          <h1 class="login-title">
+            WELCOME<br><span class="green">BACK</span>
+          </h1>
+
+          <p class="login-subtitle">
+            ACCESS YOUR PORTFOLIO DASHBOARD.<br>
+            TRACK ASSETS. ANALYZE RETURNS.
+          </p>
+
+          <div class="form-group">
+            <label class="form-label">USERNAME // EMAIL</label>
+            <div class="form-input-wrap">
+              <input type="text" placeholder="ENTER ID...">
+              <span class="form-input-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+                  <circle cx="12" cy="7" r="4"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">PASSWORD</label>
+            <div class="form-input-wrap">
+              <input type="password" placeholder="••••••••">
+              <span class="form-input-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="11" width="18" height="11" rx="0"/>
+                  <path d="M7 11V7a5 5 0 0110 0v4"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+
+          <button class="btn-green">
+            INITIATE LOGIN <span>→</span>
+          </button>
+
+          <a href="#" class="login-forgot">FORGOT PASSWORD?</a>
+
+          <div class="login-divider">
+            <span class="login-divider-line"></span>
+            <span class="login-divider-text">OR CONNECT VIA</span>
+            <span class="login-divider-line"></span>
+          </div>
+
+          <div class="social-buttons">
+            <button class="social-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/>
+                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+              </svg>
+              GOOGLE
+            </button>
+            <button class="social-btn">
+              <span class="social-btn-prefix">iOS</span> APPLE ID
+            </button>
+          </div>
+
+          <div class="login-footer">
+            <div class="login-footer-left">
+              <div class="login-footer-grid">
+                <span></span><span></span><span></span><span></span>
+              </div>
+              SECURE SERVER // 2024
+            </div>
+            <div class="login-footer-right">
+              <a href="#" onclick="showPage('register'); return false;">CREATE ACCOUNT</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="login-side-right">
+          <div class="login-terminal-lines">
+            <div>┌─────────────────────────┐</div>
+            <div>│ <span class="highlight">MARKET OVERVIEW</span>        │</div>
+            <div>│                         │</div>
+            <div>│ BTC  $67,842  <span style="color:var(--green)">▲ +2.4%</span>  │</div>
+            <div>│ ETH  $3,521   <span style="color:var(--green)">▲ +1.8%</span>  │</div>
+            <div>│ SPX  $5,234   <span style="color:var(--orange)">▼ -0.3%</span>  │</div>
+            <div>│ NDQ  $18,420  <span style="color:var(--green)">▲ +0.7%</span>  │</div>
+            <div>│ GOLD $2,340   <span style="color:var(--green)">▲ +0.2%</span>  │</div>
+            <div>│                         │</div>
+            <div>│ VOLUME: 2.4B            │</div>
+            <div>│ UPDATED: LIVE           │</div>
+            <div>└─────────────────────────┘</div>
+            <br>
+            <div>┌─────────────────────────┐</div>
+            <div>│ <span class="highlight">SERVER STATUS</span>          │</div>
+            <div>│                         │</div>
+            <div>│ API: ████████████ 100%  │</div>
+            <div>│ DB:  ███████████░  92%  │</div>
+            <div>│ CDN: ████████████ 100%  │</div>
+            <div>│ WS:  ██████████░░  87%  │</div>
+            <div>│                         │</div>
+            <div>│ PING: 12MS              │</div>
+            <div>│ REGION: EU-WEST         │</div>
+            <div>└─────────────────────────┘</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 3: REGISTER -->
+  <div class="page" id="page-register">
+    <div class="register-page">
+
+      <div class="register-layout">
+        <div class="register-side-left">
+          <div class="register-deco-grid">
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <div class="register-deco-label">
+            GRID_REF: 04x04<br>
+            NODE: ALPHA-7
+          </div>
+
+          <div style="margin-top: 60px; font-size: 11px; color: #bbb; line-height: 2.4;">
+            <div style="color: var(--orange); font-weight: 700;">WHY JOIN?</div>
+            <div>→ REAL-TIME PORTFOLIO TRACKING</div>
+            <div>→ ADVANCED ANALYTICS ENGINE</div>
+            <div>→ MULTI-ASSET SUPPORT</div>
+            <div>→ ENCRYPTED DATA VAULT</div>
+            <div>→ 24/7 MARKET ACCESS</div>
+          </div>
+        </div>
+
+        <div class="register-center">
+          <div class="register-top-bar">
+            <button class="register-back-btn" onclick="showPage('login')">←</button>
+            <span class="register-dot"></span>
+          </div>
+
+          <h1 class="register-title">
+            JOIN<br>THE<br><span class="orange">CLOUD</span>
+          </h1>
+
+          <div class="register-title-divider"></div>
+
+          <div class="form-group-reg">
+            <label class="form-label-reg">IDENTITY</label>
+            <div class="form-input-reg-wrap">
+              <input type="text" placeholder="FULL NAME">
+            </div>
+          </div>
+
+          <div class="form-group-reg">
+            <label class="form-label-reg">COORDINATES</label>
+            <div class="form-input-reg-wrap">
+              <input type="email" placeholder="NAME@EXAMPLE.COM">
+            </div>
+          </div>
+
+          <div class="form-group-reg">
+            <label class="form-label-reg">ACCESS KEY</label>
+            <div class="form-input-reg-wrap">
+              <input type="password" placeholder="••••••••••••••" id="reg-password">
+              <button class="form-input-reg-icon" onclick="togglePassword()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="eye-icon">
+                  <path d="M17.94 17.94A10.07 10.07 0 0112 20c-7 0-11-8-11-8a18.45 18.45 0 015.06-5.94"/>
+                  <path d="M9.9 4.24A9.12 9.12 0 0112 4c7 0 11 8 11 8a18.5 18.5 0 01-2.16 3.19"/>
+                  <line x1="1" y1="1" x2="23" y2="23"/>
+                </svg>
+              </button>
+            </div>
+            <div class="password-strength">
+              <span class="active"></span>
+              <span class="active"></span>
+              <span class="active"></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
+          <label class="register-checkbox">
+            <input type="checkbox">
+            <span>I AGREE TO THE <a href="#">TERMS OF SERVICE</a> AND <a href="#">PRIVACY POLICY</a>.</span>
+          </label>
+
+          <button class="btn-orange">
+            CREATE ACCOUNT <span>→</span>
+          </button>
+
+          <p class="register-login-link">
+            ALREADY A MEMBER? <a href="#" onclick="showPage('login'); return false;">LOG IN</a>
+          </p>
+        </div>
+
+        <div class="register-side-right">
+          <div class="register-side-info">
+            <div style="color: var(--orange); font-weight: 700; margin-bottom: 16px;">REGISTRATION PROTOCOL</div>
+            <div><span class="num">01.</span> PROVIDE IDENTITY DATA</div>
+            <div><span class="num">02.</span> SET COMMUNICATION COORDINATES</div>
+            <div><span class="num">03.</span> GENERATE ACCESS KEY</div>
+            <div><span class="num">04.</span> VERIFY AGREEMENT</div>
+            <div><span class="num">05.</span> INITIATE ACCOUNT CREATION</div>
+            <br>
+            <div style="border-top: 1px solid #ddd; padding-top: 16px; margin-top: 8px;">
+              <div style="color: #aaa; margin-bottom: 8px;">SECURITY LEVEL</div>
+              <div style="display: flex; gap: 4px;">
+                <span style="width: 40px; height: 6px; background: var(--green);"></span>
+                <span style="width: 40px; height: 6px; background: var(--green);"></span>
+                <span style="width: 40px; height: 6px; background: var(--green);"></span>
+                <span style="width: 40px; height: 6px; background: var(--orange);"></span>
+                <span style="width: 40px; height: 6px; background: #ddd;"></span>
+              </div>
+              <div style="margin-top: 6px; color: #aaa;">256-BIT ENCRYPTION</div>
+            </div>
+            <br><br>
+            <div style="border: 1px solid #ddd; padding: 16px;">
+              <div style="color: #aaa; margin-bottom: 6px;">EST. SETUP TIME</div>
+              <div style="font-size: 24px; font-weight: 800; color: var(--black);">< 2 MIN</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 4: DASHBOARD -->
+  <div class="page" id="page-dashboard">
+    <div class="dash-page">
+      <div class="dash-grid-bg"></div>
+      <div class="scanlines"></div>
+
+      <div class="dash-layout">
+        <!-- MAIN CONTENT -->
+        <div class="dash-main">
+
+          <!-- Header -->
+          <div class="dash-header">
+            <div class="dash-header-left">
+              <div class="dash-header-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                </svg>
+              </div>
+              <div class="dash-header-title">PORTFOLIO_TRACKER</div>
+            </div>
+            <div class="dash-header-right">
+              <button class="dash-notif-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                  <path d="M13.73 21a2 2 0 01-3.46 0"/>
+                </svg>
+                <span class="notif-dot"></span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Total Assets -->
+          <div class="dash-total-assets">
+            <div class="dash-total-top">
+              <span class="dash-total-label">// TOTAL_ASSETS</span>
+              <span class="dash-live-badge">LIVE UPDATE</span>
+            </div>
+            <div class="dash-total-amount">$52,450<span class="cents">.00</span></div>
+            <div class="dash-total-bottom">
+              <span class="dash-growth-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                </svg>
+                +12.4%
+              </span>
+              <span class="dash-growth-text">GROWTH SINCE<br>LAST SYNC CYCLE.</span>
+            </div>
+          </div>
+
+          <!-- Performance Chart (SVG Line) -->
+          <div class="dash-section-title">
+            <span class="dash-section-dot"></span>
+            PERFORMANCE_CHART // 30D
+          </div>
+
+          <div class="dash-chart-card">
+            <div class="dash-chart-header">
+              <div class="dash-chart-tabs">
+                <button class="dash-chart-tab active">1W</button>
+                <button class="dash-chart-tab">1M</button>
+                <button class="dash-chart-tab">3M</button>
+                <button class="dash-chart-tab">1Y</button>
+                <button class="dash-chart-tab">ALL</button>
+              </div>
+              <div class="dash-chart-value-inline">
+                <span class="dash-chart-current">$52,450.00</span>
+                <span class="dash-chart-pnl-up">+$5,780.40 (+12.4%)</span>
+              </div>
+            </div>
+
+            <div class="dash-chart-area">
+              <svg class="dash-svg-chart" viewBox="0 0 800 200" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="rgba(57,255,20,0.25)"/>
+                    <stop offset="100%" stop-color="rgba(57,255,20,0)"/>
+                  </linearGradient>
+                </defs>
+                <!-- Grid lines -->
+                <line x1="0" y1="50" x2="800" y2="50" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+                <line x1="0" y1="100" x2="800" y2="100" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+                <line x1="0" y1="150" x2="800" y2="150" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+                <!-- Area fill -->
+                <path d="M0,160 L30,155 L80,140 L130,145 L180,120 L230,130 L280,90 L330,95 L380,70 L430,85 L480,60 L530,55 L580,40 L630,45 L680,30 L730,35 L780,20 L800,25 L800,200 L0,200 Z" fill="url(#chartGrad)"/>
+                <!-- Line -->
+                <polyline points="0,160 30,155 80,140 130,145 180,120 230,130 280,90 330,95 380,70 430,85 480,60 530,55 580,40 630,45 680,30 730,35 780,20 800,25" fill="none" stroke="var(--green)" stroke-width="2.5"/>
+                <!-- Current dot -->
+                <circle cx="800" cy="25" r="5" fill="var(--green)"/>
+                <circle cx="800" cy="25" r="10" fill="none" stroke="var(--green)" stroke-width="1" opacity="0.4"/>
+              </svg>
+              <div class="dash-chart-y-labels">
+                <span>$55K</span>
+                <span>$50K</span>
+                <span>$45K</span>
+                <span>$40K</span>
+              </div>
+            </div>
+
+            <div class="dash-chart-x-labels">
+              <span>OCT 1</span>
+              <span>OCT 8</span>
+              <span>OCT 15</span>
+              <span>OCT 22</span>
+              <span>NOW</span>
+            </div>
+          </div>
+
+          <!-- Allocation + PnL Row -->
+          <div class="dash-duo-row">
+            <!-- Allocation Matrix -->
+            <div class="dash-duo-card">
+              <div class="dash-section-title">
+                <span class="dash-section-dot"></span>
+                ALLOCATION_MATRIX
+              </div>
+              <div class="dash-allocation">
+                <div class="dash-alloc-header">
+                  <span>DISTRIBUTION VIEW</span>
+                  <span class="dash-alloc-total">100%</span>
+                </div>
+                <div class="dash-alloc-bar">
+                  <div class="dash-alloc-segment seg-tech">TECH</div>
+                  <div class="dash-alloc-segment seg-prop">PROP</div>
+                  <div class="dash-alloc-segment seg-art">ART</div>
+                </div>
+                <div class="dash-alloc-legend">
+                  <div class="dash-alloc-legend-item">
+                    <span class="dash-alloc-legend-dot c-tech"></span>
+                    TECH <span style="margin-left: 4px; color: var(--white);">45%</span>
+                  </div>
+                  <div class="dash-alloc-legend-item">
+                    <span class="dash-alloc-legend-dot c-prop"></span>
+                    REAL EST. <span style="margin-left: 4px; color: var(--white);">35%</span>
+                  </div>
+                  <div class="dash-alloc-legend-item">
+                    <span class="dash-alloc-legend-dot c-art"></span>
+                    ART <span style="margin-left: 4px; color: var(--white);">20%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Monthly PnL -->
+            <div class="dash-duo-card">
+              <div class="dash-section-title">
+                <span class="dash-section-dot" style="background: var(--lime);"></span>
+                MONTHLY_PNL
+              </div>
+              <div class="dash-pnl-grid">
+                <div class="dash-pnl-bar-wrap">
+                  <div class="dash-pnl-bar dash-pnl-pos" style="height: 45%;"></div>
+                  <span class="dash-pnl-label">JUL</span>
+                </div>
+                <div class="dash-pnl-bar-wrap">
+                  <div class="dash-pnl-bar dash-pnl-pos" style="height: 70%;"></div>
+                  <span class="dash-pnl-label">AUG</span>
+                </div>
+                <div class="dash-pnl-bar-wrap">
+                  <div class="dash-pnl-bar dash-pnl-neg" style="height: 30%;"></div>
+                  <span class="dash-pnl-label">SEP</span>
+                </div>
+                <div class="dash-pnl-bar-wrap">
+                  <div class="dash-pnl-bar dash-pnl-pos" style="height: 90%;"></div>
+                  <span class="dash-pnl-label">OCT</span>
+                </div>
+              </div>
+              <div class="dash-pnl-summary">
+                <div>
+                  <div class="dash-pnl-sum-label">NET PNL</div>
+                  <div class="dash-pnl-sum-value">+$8,420</div>
+                </div>
+                <div style="text-align: right;">
+                  <div class="dash-pnl-sum-label">WIN RATE</div>
+                  <div class="dash-pnl-sum-value" style="color: var(--green);">75%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Market Heatmap -->
+          <div class="dash-section-title">
+            <span class="dash-section-dot" style="background: var(--orange);"></span>
+            MARKET_HEATMAP
+          </div>
+
+          <div class="dash-heatmap">
+            <div class="dash-heat-cell heat-hot-3" style="flex: 3;">
+              <span class="dash-heat-name">TECH</span>
+              <span class="dash-heat-val">+8.2%</span>
+            </div>
+            <div class="dash-heat-cell heat-hot-2" style="flex: 2;">
+              <span class="dash-heat-name">ENERGY</span>
+              <span class="dash-heat-val">+4.1%</span>
+            </div>
+            <div class="dash-heat-cell heat-cold-1" style="flex: 1.5;">
+              <span class="dash-heat-name">RE</span>
+              <span class="dash-heat-val">-1.2%</span>
+            </div>
+            <div class="dash-heat-cell heat-hot-1" style="flex: 1;">
+              <span class="dash-heat-name">ART</span>
+              <span class="dash-heat-val">+2.3%</span>
+            </div>
+            <div class="dash-heat-cell heat-cold-2" style="flex: 1.5;">
+              <span class="dash-heat-name">INFRA</span>
+              <span class="dash-heat-val">-3.5%</span>
+            </div>
+            <div class="dash-heat-cell heat-hot-1" style="flex: 1;">
+              <span class="dash-heat-name">DEFI</span>
+              <span class="dash-heat-val">+1.8%</span>
+            </div>
+          </div>
+
+          <!-- Active Investments -->
+          <div class="dash-investments">
+            <div class="dash-section-title">
+              <span class="dash-section-dot" style="background: var(--orange);"></span>
+              ACTIVE_POSITIONS
+            </div>
+
+            <div class="dash-inv-grid">
+              <!-- Card 1: Neural Link -->
+              <div class="dash-inv-card">
+                <div class="dash-inv-badge badge-series">SERIES A</div>
+                <div class="dash-inv-header">
+                  <div class="dash-inv-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="3" width="20" height="14" rx="0"/>
+                      <line x1="8" y1="21" x2="16" y2="21"/>
+                      <line x1="12" y1="17" x2="12" y2="21"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="dash-inv-name">NEURAL_LINK V2</div>
+                    <div class="dash-inv-meta">TECH SECTOR &bull; SAN FRANCISCO</div>
+                  </div>
+                </div>
+                <div class="dash-inv-stats">
+                  <div>
+                    <div class="dash-inv-stat-label">ALLOCATED</div>
+                    <div class="dash-inv-stat-value">$12,500</div>
+                  </div>
+                  <div style="text-align: right;">
+                    <div class="dash-inv-stat-label">RETURN</div>
+                    <div class="dash-inv-stat-value return-pos">+82%</div>
+                  </div>
+                </div>
+                <div class="dash-inv-progress">
+                  <div class="dash-inv-progress-bar">
+                    <div class="dash-inv-progress-fill fill-green" style="width: 82%;"></div>
+                  </div>
+                  <div class="dash-inv-progress-info">
+                    <span>PROGRESS: 82%</span>
+                    <span>TARGET: $2M</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2: Block 44 -->
+              <div class="dash-inv-card">
+                <div class="dash-inv-badge badge-equity">EQUITY</div>
+                <div class="dash-inv-header">
+                  <div class="dash-inv-icon" style="border-color: var(--orange);">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2">
+                      <rect x="3" y="3" width="7" height="7"/>
+                      <rect x="14" y="3" width="7" height="7"/>
+                      <rect x="3" y="14" width="7" height="7"/>
+                      <rect x="14" y="14" width="7" height="7"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="dash-inv-name">BLOCK 44 RE-DEV</div>
+                    <div class="dash-inv-meta">REAL ESTATE &bull; BERLIN</div>
+                  </div>
+                </div>
+                <div class="dash-inv-stats">
+                  <div>
+                    <div class="dash-inv-stat-label">ALLOCATED</div>
+                    <div class="dash-inv-stat-value">$8,200</div>
+                  </div>
+                  <div style="text-align: right;">
+                    <div class="dash-inv-stat-label">RETURN</div>
+                    <div class="dash-inv-stat-value return-pos">+12%</div>
+                  </div>
+                </div>
+                <div class="dash-inv-progress">
+                  <div class="dash-inv-progress-bar">
+                    <div class="dash-inv-progress-fill fill-orange" style="width: 45%;"></div>
+                  </div>
+                  <div class="dash-inv-progress-info">
+                    <span>PROGRESS: 45%</span>
+                    <span>TARGET: $5M</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3: Digital Collective -->
+              <div class="dash-inv-card">
+                <div class="dash-inv-badge badge-nft">NFT</div>
+                <div class="dash-inv-header">
+                  <div class="dash-inv-icon" style="border-color: var(--purple);">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="dash-inv-name">DIGITAL COLLECTIVE</div>
+                    <div class="dash-inv-meta">ART &bull; GLOBAL</div>
+                  </div>
+                </div>
+                <div class="dash-inv-stats">
+                  <div>
+                    <div class="dash-inv-stat-label">ALLOCATED</div>
+                    <div class="dash-inv-stat-value">$1,500</div>
+                  </div>
+                  <div style="text-align: right;">
+                    <div class="dash-inv-stat-label">RETURN</div>
+                    <div class="dash-inv-stat-value return-pos">+205%</div>
+                  </div>
+                </div>
+                <div class="dash-inv-progress">
+                  <div class="dash-inv-progress-bar">
+                    <div class="dash-inv-progress-fill fill-purple" style="width: 100%;"></div>
+                  </div>
+                  <div class="dash-inv-progress-info">
+                    <span>PROGRESS: CLOSED</span>
+                    <span>TARGET: 3500K</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- SIDEBAR -->
+        <div class="dash-sidebar">
+
+          <!-- Quick Stats -->
+          <div class="dash-quick-stats">
+            <div class="dash-qs-card">
+              <div class="dash-qs-label">ACTIVE</div>
+              <div class="dash-qs-value" style="color: var(--green);">3</div>
+            </div>
+            <div class="dash-qs-card">
+              <div class="dash-qs-label">PENDING</div>
+              <div class="dash-qs-value" style="color: var(--orange);">1</div>
+            </div>
+            <div class="dash-qs-card">
+              <div class="dash-qs-label">ROI AVG</div>
+              <div class="dash-qs-value" style="color: var(--green);">+99.7%</div>
+            </div>
+            <div class="dash-qs-card">
+              <div class="dash-qs-label">RISK</div>
+              <div class="dash-qs-value" style="color: var(--orange);">MED</div>
+            </div>
+          </div>
+
+          <!-- System Logs -->
+          <div class="dash-logs">
+            <div class="dash-logs-header">
+              <div class="dash-logs-title">SYSTEM_LOGS / RECENT_ACTIVITY</div>
+              <div class="dash-logs-live-dot"></div>
+            </div>
+
+            <!-- Log 1 -->
+            <div class="dash-log-entry">
+              <div class="dash-log-top">
+                <span class="dash-log-type log-dividend">>> YIELD_RECEIVED</span>
+                <span class="dash-log-time">14:02</span>
+              </div>
+              <div class="dash-log-text">Yield from "Urban Block 44" processed successfully.</div>
+              <div class="dash-log-amount positive">+$45.20 USD</div>
+            </div>
+
+            <!-- Log 2 -->
+            <div class="dash-log-entry">
+              <div class="dash-log-top">
+                <span class="dash-log-type log-update">>> PROJECT_UPDATE</span>
+                <span class="dash-log-time">YESTERDAY</span>
+              </div>
+              <div class="dash-log-text">Delays reported for "Neural_Link V2" supply chain.</div>
+              <button class="dash-log-btn">READ REPORT</button>
+            </div>
+
+            <!-- Log 3 -->
+            <div class="dash-log-entry">
+              <div class="dash-log-top">
+                <span class="dash-log-type log-invest">>> NEW_POSITION</span>
+                <span class="dash-log-time">2 DAYS AGO</span>
+              </div>
+              <div class="dash-log-text">Auto-allocation triggered for "Green Energy Grid".</div>
+              <div class="dash-log-amount negative">-$200.00</div>
+            </div>
+
+            <div class="dash-logs-footer">LOAD_MORE_LOGS [0]</div>
+          </div>
+
+          <!-- Watchlist -->
+          <div class="dash-watchlist">
+            <div class="dash-watchlist-header">
+              <span>WATCHLIST</span>
+              <span class="dash-wl-count">6 ITEMS</span>
+            </div>
+            <div class="dash-wl-item">
+              <div class="dash-wl-left">
+                <div class="dash-wl-dot" style="background: var(--green);"></div>
+                <span class="dash-wl-name">NEURAL_LINK</span>
+              </div>
+              <div class="dash-wl-right">
+                <span class="dash-wl-price">$24.80</span>
+                <span class="dash-wl-change wl-up">+5.2%</span>
+              </div>
+            </div>
+            <div class="dash-wl-item">
+              <div class="dash-wl-left">
+                <div class="dash-wl-dot" style="background: var(--orange);"></div>
+                <span class="dash-wl-name">SOLAR_GRID</span>
+              </div>
+              <div class="dash-wl-right">
+                <span class="dash-wl-price">$18.40</span>
+                <span class="dash-wl-change wl-down">-1.8%</span>
+              </div>
+            </div>
+            <div class="dash-wl-item">
+              <div class="dash-wl-left">
+                <div class="dash-wl-dot" style="background: var(--green);"></div>
+                <span class="dash-wl-name">CYBER_PLANT</span>
+              </div>
+              <div class="dash-wl-right">
+                <span class="dash-wl-price">$42.50</span>
+                <span class="dash-wl-change wl-up">+12.1%</span>
+              </div>
+            </div>
+            <div class="dash-wl-item">
+              <div class="dash-wl-left">
+                <div class="dash-wl-dot" style="background: var(--purple);"></div>
+                <span class="dash-wl-name">DAO_VAULT</span>
+              </div>
+              <div class="dash-wl-right">
+                <span class="dash-wl-price">$3.20</span>
+                <span class="dash-wl-change wl-up">+0.8%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Market Indices -->
+          <div class="dash-indices">
+            <div class="dash-indices-header">MARKET_INDICES</div>
+            <div class="dash-index-row">
+              <span class="dash-idx-name">CPF_100</span>
+              <div class="dash-idx-spark">
+                <svg viewBox="0 0 60 20" preserveAspectRatio="none">
+                  <polyline points="0,15 10,12 20,14 30,8 40,10 50,4 60,6" fill="none" stroke="var(--green)" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <span class="dash-idx-val dash-idx-up">+3.2%</span>
+            </div>
+            <div class="dash-index-row">
+              <span class="dash-idx-name">TECH_IX</span>
+              <div class="dash-idx-spark">
+                <svg viewBox="0 0 60 20" preserveAspectRatio="none">
+                  <polyline points="0,10 10,8 20,12 30,6 40,9 50,3 60,5" fill="none" stroke="var(--green)" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <span class="dash-idx-val dash-idx-up">+5.1%</span>
+            </div>
+            <div class="dash-index-row">
+              <span class="dash-idx-name">RE_IDX</span>
+              <div class="dash-idx-spark">
+                <svg viewBox="0 0 60 20" preserveAspectRatio="none">
+                  <polyline points="0,8 10,10 20,9 30,14 40,12 50,16 60,14" fill="none" stroke="#cc0000" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <span class="dash-idx-val dash-idx-down">-1.4%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Nav -->
+        <div class="dash-bottom-nav">
+          <button class="dash-bnav-item active">
+            <div class="dash-bnav-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+                <rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
+              </svg>
+            </div>
+            DASH
+          </button>
+          <button class="dash-bnav-item">
+            <div class="dash-bnav-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
+            </div>
+            ASSETS
+          </button>
+          <button class="dash-bnav-item">
+            <div class="dash-bnav-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 014-4h14"/>
+                <polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 01-4 4H3"/>
+              </svg>
+            </div>
+            TRADE
+          </button>
+          <button class="dash-bnav-item">
+            <div class="dash-bnav-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/>
+              </svg>
+            </div>
+            CONFIG
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 5: EXPLORE / FEED -->
+  <div class="page" id="page-explore">
+    <div class="explore-page">
+      <div class="scanlines"></div>
+
+      <!-- Opportunity Ticker -->
+      <div class="explore-ticker">
+        <div class="ticker-track">
+          // NEW LISTINGS ADDED // HIGH RISK HIGH REWARD // 3 ASSETS CLOSING SOON // TRENDING: CYBER PLANT_01 // NEW LISTINGS ADDED // HIGH RISK HIGH REWARD // 3 ASSETS CLOSING SOON // TRENDING: CYBER PLANT_01 // NEW LISTINGS ADDED // HIGH RISK HIGH REWARD //&nbsp;&nbsp;&nbsp;
+          // NEW LISTINGS ADDED // HIGH RISK HIGH REWARD // 3 ASSETS CLOSING SOON // TRENDING: CYBER PLANT_01 // NEW LISTINGS ADDED // HIGH RISK HIGH REWARD // 3 ASSETS CLOSING SOON // TRENDING: CYBER PLANT_01 // NEW LISTINGS ADDED // HIGH RISK HIGH REWARD //
+        </div>
+      </div>
+
+      <!-- Featured Investment Hero -->
+      <div class="explore-featured">
+        <div class="explore-featured-bg"></div>
+        <div class="explore-featured-inner">
+          <div class="explore-feat-left">
+            <div class="explore-feat-tags">
+              <span class="explore-feat-tag tag-series">SERIES_A</span>
+              <span class="explore-feat-tag tag-trending">TRENDING</span>
+            </div>
+
+            <h1 class="explore-feat-title">
+              CYBER<br><span class="lime">PLANT_01</span>
+            </h1>
+
+            <p class="explore-feat-desc">
+              > Sustainable hydroponic farms powered by waste heat recovery. Next-gen agriculture meets institutional-grade infrastructure.
+            </p>
+
+            <div class="explore-feat-stats">
+              <div>
+                <div class="explore-feat-stat-label">HARVEST</div>
+                <div class="explore-feat-stat-value">$42,500</div>
+              </div>
+              <div>
+                <div class="explore-feat-stat-label">EQUITY</div>
+                <div class="explore-feat-stat-value" style="color: var(--lime);">5.0%</div>
+              </div>
+            </div>
+
+            <div class="explore-feat-progress">
+              <div class="explore-feat-progress-header">
+                <span>ALLOCATION PROGRESS</span>
+                <span style="color: var(--lime);">86%</span>
+              </div>
+              <div class="explore-feat-progress-bar">
+                <div class="explore-feat-progress-fill" style="width: 86%;"></div>
+              </div>
+            </div>
+
+            <button class="btn-lime">TRADE NOW <span>→</span></button>
+          </div>
+
+          <div class="explore-feat-right">
+            <div class="explore-feat-image">
+              <div class="explore-feat-image-overlay">PLANT_01</div>
+              <div class="explore-feat-image-label">CYBER_AGRICULTURE // 2024</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Atmospheric Band -->
+      <div class="explore-atmo-band">
+        <div class="explore-atmo-bg"></div>
+        <div class="explore-atmo-text">ALMOST</div>
+      </div>
+
+      <!-- Feed Section -->
+      <div class="explore-feed-section" style="position: relative;">
+        <div class="explore-feed-header">
+          <span class="explore-feed-label">EXPLORE</span>
+          <button class="btn-filter">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="4" y1="6" x2="20" y2="6"/>
+              <line x1="8" y1="12" x2="16" y2="12"/>
+              <line x1="11" y1="18" x2="13" y2="18"/>
+            </svg>
+            FILTER_FEED
+          </button>
+        </div>
+
+        <div class="explore-feed-grid">
+
+          <!-- Card 1: Neon District -->
+          <div class="explore-card">
+            <div class="explore-card-image">
+              <div class="explore-card-image-bg" style="background: linear-gradient(180deg, transparent 30%, rgba(0,0,0,0.7) 100%), url('https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=600&q=80') center/cover;"></div>
+              <div class="explore-card-image-text">
+                <h3>NEON_DISTRICT</h3>
+                <div class="explore-card-image-tags">
+                  <span class="explore-card-image-tag">REAL_WORLD</span>
+                  <span class="explore-card-image-tag tag-alt">AI & MAIN UNIT</span>
+                </div>
+              </div>
+            </div>
+            <div class="explore-card-body">
+              <div class="explore-card-stat-label">MIN ENTRY</div>
+              <div class="explore-card-stat-value">$600.00</div>
+              <button class="btn-outline-sm">VIEW DETAILS <span>→</span></button>
+            </div>
+          </div>
+
+          <!-- Card 2: Solar Grid -->
+          <div class="explore-card">
+            <div class="explore-card-image">
+              <div class="explore-card-image-bg" style="background: linear-gradient(180deg, transparent 30%, rgba(0,0,0,0.7) 100%), url('https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&q=80') center/cover;"></div>
+              <div class="explore-card-image-text">
+                <h3>SOLAR_GRID_X</h3>
+                <div class="explore-card-image-tags">
+                  <span class="explore-card-image-tag" style="background: var(--green);">CLEAN_ENERGY</span>
+                  <span class="explore-card-image-tag tag-alt">SERIES B</span>
+                </div>
+              </div>
+            </div>
+            <div class="explore-card-body">
+              <div class="explore-card-stat-label">MIN ENTRY</div>
+              <div class="explore-card-stat-value">$1,200.00</div>
+              <button class="btn-outline-sm">VIEW DETAILS <span>→</span></button>
+            </div>
+          </div>
+
+          <!-- Card 3: Hidden Gem (Locked) -->
+          <div class="explore-card-locked">
+            <div class="explore-lock-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="0"/>
+                <path d="M7 11V7a5 5 0 0110 0v4"/>
+              </svg>
+            </div>
+            <div class="explore-lock-title">HIDDEN_GEM</div>
+            <div class="explore-lock-timer">UNLOCKS IN 24:00:00</div>
+            <button class="btn-lime-sm">GET PUSH NGEN <span>→</span></button>
+          </div>
+
+          <!-- Card 4: DAO Vault -->
+          <div class="explore-card">
+            <div class="explore-card-image">
+              <div class="explore-card-image-bg" style="background: linear-gradient(180deg, transparent 30%, rgba(0,0,0,0.7) 100%), url('https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&q=80') center/cover;"></div>
+              <div class="explore-card-image-text">
+                <h3>DAO_VAULT_III</h3>
+                <div class="explore-card-image-tags">
+                  <span class="explore-card-image-tag" style="background: var(--purple); color: var(--white);">DEFI</span>
+                  <span class="explore-card-image-tag tag-alt">GOVERNANCE</span>
+                </div>
+              </div>
+            </div>
+            <div class="explore-card-body">
+              <div class="explore-card-stat-label">MIN ENTRY</div>
+              <div class="explore-card-stat-value">$250.00</div>
+              <button class="btn-outline-sm">VIEW DETAILS <span>→</span></button>
+            </div>
+          </div>
+
+          <!-- Card 5: Arctic Data -->
+          <div class="explore-card">
+            <div class="explore-card-image">
+              <div class="explore-card-image-bg" style="background: linear-gradient(180deg, transparent 30%, rgba(0,0,0,0.7) 100%), url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80') center/cover;"></div>
+              <div class="explore-card-image-text">
+                <h3>ARCTIC_DATA</h3>
+                <div class="explore-card-image-tags">
+                  <span class="explore-card-image-tag">INFRASTRUCTURE</span>
+                  <span class="explore-card-image-tag tag-alt">PRE-SEED</span>
+                </div>
+              </div>
+            </div>
+            <div class="explore-card-body">
+              <div class="explore-card-stat-label">MIN ENTRY</div>
+              <div class="explore-card-stat-value">$3,000.00</div>
+              <button class="btn-outline-sm">VIEW DETAILS <span>→</span></button>
+            </div>
+          </div>
+
+          <!-- Card 6: Hidden Gem 2 (Locked) -->
+          <div class="explore-card-locked">
+            <div class="explore-lock-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="0"/>
+                <path d="M7 11V7a5 5 0 0110 0v4"/>
+              </svg>
+            </div>
+            <div class="explore-lock-title">HIDDEN_GEM</div>
+            <div class="explore-lock-timer">UNLOCKS IN 48:00:00</div>
+            <button class="btn-lime-sm">GET PUSH NGEN <span>→</span></button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PAGE 6: WALLET -->
+  <div class="page" id="page-wallet">
+    <div class="wallet-page">
+      <div class="scanlines"></div>
+
+      <div class="wallet-layout">
+        <!-- Header (full width) -->
+        <div class="wallet-header">
+          <div class="wallet-header-left">
+            <div class="wallet-header-icon">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <div class="wallet-header-title">WALLET // 01</div>
+          </div>
+          <div class="dash-header-right">
+            <button class="dash-notif-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                <path d="M13.73 21a2 2 0 01-3.46 0"/>
+              </svg>
+              <span class="notif-dot"></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="wallet-main">
+
+          <!-- Balance Card -->
+          <div class="wallet-balance-card">
+            <div class="wallet-balance-corner">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <circle cx="12" cy="12" r="3"/>
+                <line x1="12" y1="2" x2="12" y2="6"/>
+                <line x1="12" y1="18" x2="12" y2="22"/>
+                <line x1="2" y1="12" x2="6" y2="12"/>
+                <line x1="18" y1="12" x2="22" y2="12"/>
+              </svg>
+            </div>
+            <div class="wallet-balance-status">LIQUIDITY STATUS: ACTIVE</div>
+            <div class="wallet-balance-amount">$14,250<span class="cents">.00</span></div>
+            <div class="wallet-balance-divider"></div>
+            <div class="wallet-balance-growth">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+              </svg>
+              +24% THIS MONTH
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="wallet-actions">
+            <button class="wallet-action-btn wallet-action-deposit" onclick="showPage('deposit')">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M12 5v14"/><path d="M19 12l-7 7-7-7"/>
+              </svg>
+              DEPOSIT
+            </button>
+            <button class="wallet-action-btn wallet-action-withdraw" onclick="showPage('withdraw')">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+              </svg>
+              WITHDRAW
+            </button>
+          </div>
+
+          <!-- Transaction Log -->
+          <div class="wallet-log">
+            <div class="wallet-log-header">
+              <div class="wallet-log-title">LATEST MOVEMENT LOG_V.2.4</div>
+              <button class="wallet-log-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="0"/>
+                  <line x1="3" y1="9" x2="21" y2="9"/>
+                  <line x1="9" y1="3" x2="9" y2="21"/>
+                </svg>
+              </button>
+            </div>
+
+            <div class="wallet-log-columns">
+              <span>DESCRIPTION / ID</span>
+              <span>AMOUNT</span>
+            </div>
+
+            <div class="wallet-log-entry">
+              <div class="wallet-log-entry-left">
+                <div class="wallet-log-entry-name">PROJ-884 RETURN</div>
+                <div class="wallet-log-entry-date">2023-10-24 | 14:30 EST</div>
+              </div>
+              <div class="wallet-log-entry-right">
+                <div class="wallet-log-entry-amount amount-pos">+$450.00</div>
+                <div class="wallet-log-entry-status status-settled">SETTLED</div>
+              </div>
+            </div>
+
+            <div class="wallet-log-entry">
+              <div class="wallet-log-entry-left">
+                <div class="wallet-log-entry-name">WITHDRAWAL BANK-01</div>
+                <div class="wallet-log-entry-date">2023-10-22 | 09:15 EST</div>
+              </div>
+              <div class="wallet-log-entry-right">
+                <div class="wallet-log-entry-amount amount-neg">-$1,200.00</div>
+                <div class="wallet-log-entry-status status-pending">PENDING</div>
+              </div>
+            </div>
+
+            <div class="wallet-log-entry">
+              <div class="wallet-log-entry-left">
+                <div class="wallet-log-entry-name">SEED INV. ALPHA</div>
+                <div class="wallet-log-entry-date">2023-10-18 | 11:45 EST</div>
+              </div>
+              <div class="wallet-log-entry-right">
+                <div class="wallet-log-entry-amount amount-neg">-$5,000.00</div>
+                <div class="wallet-log-entry-status status-completed">COMPLETED</div>
+              </div>
+            </div>
+
+            <div class="wallet-log-entry">
+              <div class="wallet-log-entry-left">
+                <div class="wallet-log-entry-name">TOP UP #9921</div>
+                <div class="wallet-log-entry-date">2023-10-15 | 16:20 EST</div>
+              </div>
+              <div class="wallet-log-entry-right">
+                <div class="wallet-log-entry-amount amount-pos">+$2,000.00</div>
+                <div class="wallet-log-entry-status status-settled">SETTLED</div>
+              </div>
+            </div>
+
+            <div class="wallet-log-footer">END OF LOG // REF: 994-A2</div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="wallet-sidebar">
+          <div class="wallet-side-stats">
+            <div class="wallet-side-card">
+              <div class="wallet-side-card-label">AVAILABLE</div>
+              <div class="wallet-side-card-value" style="color: var(--green);">$9,050</div>
+            </div>
+            <div class="wallet-side-card">
+              <div class="wallet-side-card-label">LOCKED</div>
+              <div class="wallet-side-card-value" style="color: var(--orange);">$5,200</div>
+            </div>
+            <div class="wallet-side-card">
+              <div class="wallet-side-card-label">DEPOSITS</div>
+              <div class="wallet-side-card-value">12</div>
+            </div>
+            <div class="wallet-side-card">
+              <div class="wallet-side-card-label">WITHDRAWALS</div>
+              <div class="wallet-side-card-value">4</div>
+            </div>
+          </div>
+
+          <!-- Map Card -->
+          <div class="wallet-map-card">
+            <div class="wallet-map-visual">
+              <div class="wallet-map-dots">       ..  .        ...    ..
+    ..    ████████    ██████ ..
+  .  ██████████████ ████████..
+  . ████████████████████████.
+   ████████████████████████ ..
+  . ██████████ ████████████
+    ████████    ██████████ .
+  .  ██████  .   ████████
+    ..████ ..      ██████  .
+  ..  ██ . .  ..   ████  ..
+   .    ..        .  ██.    .
+  ..  .     ..  .    . .. .
+    .    .        .     ..</div>
+              <div class="wallet-map-glow g1"></div>
+              <div class="wallet-map-glow g2"></div>
+              <div class="wallet-map-glow g3"></div>
+              <div class="wallet-map-region-badge">REGION: GLOBAL</div>
+            </div>
+            <div class="wallet-map-footer">
+              <div class="wallet-map-footer-title">PORTFOLIO DISTRIBUTION</div>
+              <div class="wallet-map-footer-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="2" y1="12" x2="22" y2="12"/>
+                  <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Nav -->
+        <div class="wallet-bottom-nav">
+          <button class="wallet-bnav-item active">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="4" width="20" height="16" rx="0"/><line x1="2" y1="10" x2="22" y2="10"/>
+            </svg>
+            WALLET
+          </button>
+          <button class="wallet-bnav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>
+            </svg>
+            METRICS
+          </button>
+          <button class="wallet-bnav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/>
+            </svg>
+            CONFIG
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 7: PROFILE -->
+  <div class="page" id="page-profile">
+    <div class="profile-page">
+
+      <div class="profile-layout">
+
+        <!-- LEFT: Avatar + Stats -->
+        <div class="profile-left">
+
+          <div class="profile-header-bar">
+            <button class="profile-back-btn" onclick="showPage('dashboard')">←</button>
+            <div class="profile-header-title">PROFILE_V1</div>
+          </div>
+
+          <!-- Avatar Card -->
+          <div class="profile-avatar-section">
+            <div class="profile-avatar-wrap">
+              <div class="profile-avatar">
+                <div class="profile-avatar-art"></div>
+                <div class="profile-avatar-red-bar"></div>
+              </div>
+              <button class="profile-avatar-edit">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M17 3a2.83 2.83 0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/>
+                </svg>
+              </button>
+            </div>
+            <div class="profile-username">USER_X_99</div>
+            <div class="profile-userid">ID: #882-991-AZ</div>
+          </div>
+
+          <!-- Account Stats -->
+          <div class="profile-stats-section">
+            <div class="profile-stats-header">
+              <span class="profile-stats-title">ACCOUNT STATS</span>
+              <span class="profile-stats-live">LIVE</span>
+            </div>
+            <div class="profile-stats-grid">
+              <div class="profile-stat-card">
+                <div class="profile-stat-card-label">PROJECTS</div>
+                <div class="profile-stat-card-value">12</div>
+              </div>
+              <div class="profile-stat-card">
+                <div class="profile-stat-card-label">YEARS</div>
+                <div class="profile-stat-card-value">04</div>
+              </div>
+              <div class="profile-stat-card">
+                <div class="profile-stat-card-label">RETURNS</div>
+                <div class="profile-stat-card-value">87</div>
+              </div>
+              <div class="profile-stat-card">
+                <div class="profile-stat-card-label">RANK</div>
+                <div class="profile-stat-card-value">A+</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: Settings -->
+        <div class="profile-right">
+
+          <div class="profile-settings-list">
+            <!-- Security -->
+            <div class="profile-setting-item">
+              <div class="profile-setting-left">
+                <div class="profile-setting-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  </svg>
+                </div>
+                <span class="profile-setting-name">SECURITY</span>
+              </div>
+              <div class="profile-setting-right">
+                <span class="profile-setting-arrow">→</span>
+              </div>
+            </div>
+
+            <!-- Notifications -->
+            <div class="profile-setting-item">
+              <div class="profile-setting-left">
+                <div class="profile-setting-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                    <path d="M13.73 21a2 2 0 01-3.46 0"/>
+                  </svg>
+                </div>
+                <span class="profile-setting-name">NOTIFICATIONS</span>
+              </div>
+              <div class="profile-setting-right">
+                <span class="profile-setting-badge">3 NEW</span>
+                <span class="profile-setting-arrow">→</span>
+              </div>
+            </div>
+
+            <!-- Linked Banks -->
+            <div class="profile-setting-item">
+              <div class="profile-setting-left">
+                <div class="profile-setting-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 2 7 2 10 22 10 22 7 12 2"/>
+                    <line x1="6" y1="10" x2="6" y2="18"/>
+                    <line x1="10" y1="10" x2="10" y2="18"/>
+                    <line x1="14" y1="10" x2="14" y2="18"/>
+                    <line x1="18" y1="10" x2="18" y2="18"/>
+                    <rect x="2" y="18" width="20" height="3"/>
+                  </svg>
+                </div>
+                <span class="profile-setting-name">LINKED BANKS</span>
+              </div>
+              <div class="profile-setting-right">
+                <span class="profile-setting-arrow">→</span>
+              </div>
+            </div>
+
+            <!-- App Prefs -->
+            <div class="profile-setting-item">
+              <div class="profile-setting-left">
+                <div class="profile-setting-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="4" y1="6" x2="20" y2="6"/>
+                    <line x1="4" y1="12" x2="20" y2="12"/>
+                    <line x1="4" y1="18" x2="20" y2="18"/>
+                    <circle cx="8" cy="6" r="2" fill="currentColor"/>
+                    <circle cx="16" cy="12" r="2" fill="currentColor"/>
+                    <circle cx="10" cy="18" r="2" fill="currentColor"/>
+                  </svg>
+                </div>
+                <span class="profile-setting-name">APP PREFS</span>
+              </div>
+              <div class="profile-setting-right">
+                <span class="profile-setting-arrow">→</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Logout -->
+          <div class="profile-logout">
+            <button class="profile-logout-btn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="6" x2="12" y2="12"/>
+              </svg>
+              LOGOUT
+            </button>
+          </div>
+
+          <div class="profile-version">VERSION 2.4.0_BETA // BUILD_9921</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 8: PROJECT DETAIL -->
+  <div class="page" id="page-project">
+    <div class="project-page">
+      <div class="scanlines"></div>
+
+      <!-- Hero -->
+      <div class="project-hero">
+        <div class="project-hero-bg"></div>
+        <div class="project-hero-nav">
+          <button class="project-hero-btn" onclick="showPage('explore')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="15 18 9 12 15 6"/>
+            </svg>
+          </button>
+          <button class="project-hero-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+            </svg>
+          </button>
+        </div>
+        <div class="project-hero-content">
+          <div class="project-hero-badge">SERIES A &bull; 12 DAYS LEFT</div>
+          <h1 class="project-hero-title">SOLAR-X<br>GEN 4</h1>
+        </div>
+      </div>
+
+      <!-- Main Layout -->
+      <div class="project-layout">
+
+        <!-- Funding Status -->
+        <div class="project-funding">
+          <div class="project-funding-header">
+            <div class="project-funding-label">CAPITAL</div>
+            <div class="project-funding-title">STATUS</div>
+          </div>
+
+          <div class="project-funding-grid">
+            <div>
+              <div class="project-funding-stats">
+                <div class="project-funding-stat">TARGET: <span>$5M USD</span></div>
+                <div class="project-funding-stat">DEPLOYED: <span>$4.35M USD</span></div>
+              </div>
+              <div class="project-momentum">
+                <div class="project-momentum-label">MOMENTUM</div>
+                <div class="project-momentum-value">HIGH</div>
+              </div>
+            </div>
+            <div class="project-progress-vertical">
+              <div class="project-progress-fill" style="height: 87%;"></div>
+              <div class="project-progress-text">87%</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Roadmap -->
+        <div class="project-roadmap">
+          <div class="project-roadmap-header">
+            <div class="project-roadmap-title">ROADMAP</div>
+            <span class="project-roadmap-quarter">Q3 2024</span>
+          </div>
+
+          <div class="project-roadmap-timeline">
+            <div class="project-roadmap-item">
+              <div class="project-roadmap-dot dot-completed"></div>
+              <div class="project-roadmap-item-title">PROTOTYPE</div>
+              <div class="project-roadmap-item-status s-completed">STATUS: COMPLETED</div>
+              <div class="project-roadmap-item-desc">Initial viable product tested in controlled environment. Efficiency +15%.</div>
+            </div>
+
+            <div class="project-roadmap-item">
+              <div class="project-roadmap-dot dot-progress"></div>
+              <div class="project-roadmap-item-title">FACTORY TOOLING</div>
+              <div class="project-roadmap-item-status s-progress">STATUS: IN PROGRESS</div>
+              <div class="project-roadmap-item-desc">Setting up assembly lines in Berlin gigafactory. Robots online.</div>
+            </div>
+
+            <div class="project-roadmap-item">
+              <div class="project-roadmap-dot dot-pending"></div>
+              <div class="project-roadmap-item-title">GLOBAL SHIPPING</div>
+              <div class="project-roadmap-item-status s-pending">STATUS: PENDING</div>
+              <div class="project-roadmap-item-desc">Logistics partnerships finalized with DHL and Maersk.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Intel Docs -->
+        <div class="project-docs">
+          <div class="project-docs-title">INTEL<br><span class="yellow">DOCS</span></div>
+
+          <div class="project-docs-list">
+            <div class="project-doc-item">
+              <div class="project-doc-left">
+                <div class="project-doc-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="project-doc-name">WHITEPAPER_V2.PDF</div>
+                  <div class="project-doc-meta">2.4 MB &bull; UPDATED YESTERDAY</div>
+                </div>
+              </div>
+              <button class="project-doc-get">GET</button>
+            </div>
+
+            <div class="project-doc-item">
+              <div class="project-doc-left">
+                <div class="project-doc-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="project-doc-name">RISK_ASSESSMENT.PDF</div>
+                  <div class="project-doc-meta">1.1 MB &bull; LEGAL APPROVED</div>
+                </div>
+              </div>
+              <button class="project-doc-get">GET</button>
+            </div>
+
+            <div class="project-doc-item">
+              <div class="project-doc-left">
+                <div class="project-doc-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                    <polyline points="17 6 23 6 23 12"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="project-doc-name">Q2_FINANCIALS.XLSX</div>
+                  <div class="project-doc-meta">800 KB &bull; AUDITED</div>
+                </div>
+              </div>
+              <button class="project-doc-get">GET</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Invest CTA -->
+        <div class="project-cta">
+          <button class="project-cta-btn">
+            INCREASE POSITION
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ==================== DEPOSIT PAGE ==================== -->
+  <div class="page" id="page-deposit">
+    <div class="deposit-page">
+      <!-- Orange Hero -->
+      <div class="deposit-hero">
+        <div class="deposit-hero-nav">
+          <button class="deposit-back-btn" onclick="showPage('wallet')">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+              <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+          </button>
+          <div class="deposit-secure-badge">SECURE CONN.</div>
+        </div>
+        <h1 class="deposit-hero-title">ADD<br>LIQUIDITY</h1>
+      </div>
+
+      <!-- Main Layout -->
+      <div class="deposit-layout">
+        <!-- Left: Main Form -->
+        <div class="deposit-main">
+          <!-- Amount Section -->
+          <div class="deposit-amount-section">
+            <div class="deposit-amount-header">
+              <span class="deposit-amount-label">DEPOSIT AMOUNT</span>
+              <span class="deposit-currency-badge">USD $</span>
+            </div>
+            <div class="deposit-input-wrap">
+              <span class="deposit-input-prefix">$</span>
+              <input type="text" id="deposit-input" placeholder="0.00" value="">
+              <div class="deposit-input-indicator"></div>
+            </div>
+            <div class="deposit-quick-amounts">
+              <button class="deposit-quick-btn" onclick="setDepositAmount(100)">+$100</button>
+              <button class="deposit-quick-btn" onclick="setDepositAmount(500)">+$500</button>
+              <button class="deposit-quick-btn" onclick="setDepositAmount('max')">MAX</button>
+            </div>
+          </div>
+
+          <!-- Source of Funds -->
+          <div class="deposit-source-section">
+            <h3 class="deposit-source-title">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="5" width="20" height="14" rx="0"/>
+                <path d="M2 10h20"/>
+              </svg>
+              SOURCE OF FUNDS
+            </h3>
+            <div class="deposit-source-list">
+              <div class="deposit-source-item selected" data-fee="0" onclick="selectFundSource(this)">
+                <div class="deposit-source-left">
+                  <div class="deposit-source-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="deposit-source-name">WIRE TRANSFER</div>
+                    <div class="deposit-source-meta">0% FEE // 1-3 DAYS</div>
+                  </div>
+                </div>
+                <div class="deposit-source-check"></div>
+              </div>
+              <div class="deposit-source-item" data-fee="2.5" onclick="selectFundSource(this)">
+                <div class="deposit-source-left">
+                  <div class="deposit-source-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="1" y="4" width="22" height="16" rx="0"/>
+                      <path d="M1 10h22"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="deposit-source-name">DEBIT / CREDIT</div>
+                    <div class="deposit-source-meta">2.5% FEE // INSTANT</div>
+                  </div>
+                </div>
+                <div class="deposit-source-check"></div>
+              </div>
+              <div class="deposit-source-item" data-fee="1" onclick="selectFundSource(this)">
+                <div class="deposit-source-left">
+                  <div class="deposit-source-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <path d="M12 6v6l4 2"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="deposit-source-name">CRYPTO WALLET</div>
+                    <div class="deposit-source-meta">1% FEE // ~30 MIN</div>
+                  </div>
+                </div>
+                <div class="deposit-source-check"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Summary -->
+          <div class="deposit-summary">
+            <div class="deposit-summary-row">
+              <span>SUBTOTAL</span>
+              <span id="deposit-subtotal">$0.00</span>
+            </div>
+            <div class="deposit-summary-row">
+              <span>EST. FEE</span>
+              <span id="deposit-fee">$0.00</span>
+            </div>
+            <div class="deposit-summary-divider"></div>
+            <div class="deposit-summary-row deposit-summary-total">
+              <span>TOTAL CHARGE</span>
+              <span id="deposit-total">$0.00</span>
+            </div>
+          </div>
+
+          <!-- Confirm Button -->
+          <button class="deposit-confirm-btn" onclick="showPage('wallet')">
+            CONFIRM DEPOSIT
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Right: Sidebar Info -->
+        <div class="deposit-sidebar">
+          <div class="deposit-info-card">
+            <div class="deposit-info-card-label">CURRENT BALANCE</div>
+            <div class="deposit-info-card-value">$14,250.00</div>
+          </div>
+          <div class="deposit-info-card">
+            <div class="deposit-info-card-label">PENDING DEPOSITS</div>
+            <div class="deposit-info-card-value">$0.00</div>
+          </div>
+          <div class="deposit-info-card">
+            <div class="deposit-info-card-label">DAILY LIMIT</div>
+            <div class="deposit-info-card-value">$50,000.00</div>
+          </div>
+          <div class="deposit-info-card">
+            <div class="deposit-info-card-label">PROCESSING</div>
+            <div class="deposit-info-card-value">AES-256 ENCRYPTED</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== WITHDRAW PAGE ==================== -->
+  <div class="page" id="page-withdraw">
+    <div class="withdraw-page">
+      <!-- Dark Hero -->
+      <div class="withdraw-hero">
+        <div class="withdraw-hero-nav">
+          <button class="withdraw-back-btn" onclick="showPage('wallet')">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+              <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+          </button>
+          <div class="withdraw-op-badge">OPERATION: CASHOUT</div>
+        </div>
+        <h1 class="withdraw-hero-title">WITHDRAW<br>CAPITAL</h1>
+        <div class="withdraw-hero-divider"></div>
+      </div>
+
+      <!-- Main Layout -->
+      <div class="withdraw-layout">
+        <!-- Left: Main Form -->
+        <div class="withdraw-main">
+          <!-- Amount Section -->
+          <div class="withdraw-amount-section">
+            <span class="withdraw-amount-label">SPECIFY AMOUNT (USD)</span>
+            <div class="withdraw-input-wrap">
+              <span class="withdraw-input-prefix">$</span>
+              <input type="text" id="withdraw-input" placeholder="0.00" value="">
+            </div>
+            <div class="withdraw-amount-meta">
+              <span class="withdraw-avail">AVAIL: $14,250.00</span>
+              <button class="withdraw-max-btn" onclick="setWithdrawAmount('max')">MAX</button>
+            </div>
+          </div>
+
+          <!-- Select Destination -->
+          <div class="withdraw-dest-section">
+            <div class="withdraw-dest-header">
+              <h3 class="withdraw-dest-title">SELECT DESTINATION</h3>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--white)" stroke-width="2">
+                <path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3"/>
+              </svg>
+            </div>
+
+            <div class="withdraw-dest-list">
+              <div class="withdraw-dest-item selected" data-fee="0.5" onclick="selectWithdrawDest(this)">
+                <div class="withdraw-dest-top">
+                  <div class="withdraw-dest-left">
+                    <div class="withdraw-dest-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="3" width="20" height="18" rx="0"/>
+                        <path d="M2 9h20"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <div class="withdraw-dest-name">CHASE PRIVATE</div>
+                      <div class="withdraw-dest-acct">**** 8842</div>
+                    </div>
+                  </div>
+                  <div class="withdraw-dest-check"></div>
+                </div>
+                <div class="withdraw-dest-bottom">
+                  <span class="withdraw-dest-speed">INST. TRANSFER</span>
+                  <span class="withdraw-dest-fee">0.5% Fee</span>
+                </div>
+              </div>
+
+              <div class="withdraw-dest-item" data-fee="0" onclick="selectWithdrawDest(this)">
+                <div class="withdraw-dest-top">
+                  <div class="withdraw-dest-left">
+                    <div class="withdraw-dest-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="7" width="18" height="13" rx="0"/>
+                        <path d="M7 7V5a5 5 0 0110 0v2"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <div class="withdraw-dest-name">VAULT STORAGE</div>
+                      <div class="withdraw-dest-acct">**** 9921</div>
+                    </div>
+                  </div>
+                  <div class="withdraw-dest-check"></div>
+                </div>
+                <div class="withdraw-dest-bottom">
+                  <span class="withdraw-dest-speed">STANDARD (1-3 DAYS)</span>
+                  <span class="withdraw-dest-fee">No Fee</span>
+                </div>
+              </div>
+            </div>
+
+            <button class="withdraw-link-new">+ LINK NEW METHOD</button>
+          </div>
+
+          <!-- Summary -->
+          <div class="withdraw-summary">
+            <div class="withdraw-summary-row">
+              <span>WITHDRAWAL AMOUNT</span>
+              <span id="withdraw-subtotal">$0.00</span>
+            </div>
+            <div class="withdraw-summary-row withdraw-summary-fee">
+              <span>ESTIMATED FEE (<span id="withdraw-fee-pct">0.5</span>%)</span>
+              <span id="withdraw-fee">$0.00</span>
+            </div>
+            <div class="withdraw-summary-divider"></div>
+            <div class="withdraw-summary-row withdraw-summary-total">
+              <span>TOTAL DEDUCTED</span>
+              <span id="withdraw-total">$0.00</span>
+            </div>
+          </div>
+
+          <!-- Execute Button -->
+          <button class="withdraw-execute-btn" onclick="showPage('wallet')">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
+              <line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+            EXECUTE WITHDRAWAL
+          </button>
+          <div class="withdraw-disclaimer">ACTION CANNOT BE UNDONE // IP: 192.168.0.1</div>
+        </div>
+
+        <!-- Right: Sidebar -->
+        <div class="withdraw-sidebar">
+          <div class="withdraw-info-card">
+            <div class="withdraw-info-label">AVAILABLE BALANCE</div>
+            <div class="withdraw-info-value">$14,250.00</div>
+          </div>
+          <div class="withdraw-info-card">
+            <div class="withdraw-info-label">PENDING WITHDRAWALS</div>
+            <div class="withdraw-info-value">$0.00</div>
+          </div>
+          <div class="withdraw-info-card">
+            <div class="withdraw-info-label">DAILY LIMIT</div>
+            <div class="withdraw-info-value">$25,000.00</div>
+          </div>
+          <div class="withdraw-info-card">
+            <div class="withdraw-info-label">SECURITY</div>
+            <div class="withdraw-info-value">2FA VERIFIED</div>
+          </div>
+          <div class="withdraw-info-card withdraw-warning-card">
+            <div class="withdraw-info-label">⚠ NOTICE</div>
+            <div class="withdraw-info-value" style="font-size: 0.7rem; line-height: 1.4;">WITHDRAWALS ARE PROCESSED IN ORDER. LARGE AMOUNTS MAY REQUIRE ADDITIONAL VERIFICATION.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== ERROR PAGE ==================== -->
+  <div class="page" id="page-error">
+    <div class="error-page">
+      <!-- Top Bar -->
+      <div class="error-topbar">
+        <div class="error-badge">SYS_FAIL</div>
+        <div class="error-dots">
+          <span class="error-dot" style="background: var(--navy);"></span>
+          <span class="error-dot" style="background: #8b0000;"></span>
+          <span class="error-dot" style="background: #4a0000;"></span>
+        </div>
+      </div>
+
+      <!-- Error Content -->
+      <div class="error-content">
+        <!-- X Icon -->
+        <div class="error-icon-wrap">
+          <div class="error-icon-box">
+            <svg class="error-x-icon" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="#cc0000" stroke-width="3.5" stroke-linecap="square">
+              <line x1="4" y1="4" x2="20" y2="20"/>
+              <line x1="20" y1="4" x2="4" y2="20"/>
+            </svg>
+            <div class="error-scratch error-scratch-1"></div>
+            <div class="error-scratch error-scratch-2"></div>
+          </div>
+        </div>
+
+        <!-- Title -->
+        <h1 class="error-title">
+          <span class="error-title-black">ACTION</span>
+          <span class="error-title-dark">HALTED</span>
+        </h1>
+
+        <!-- Error Banner -->
+        <div class="error-banner">ERROR 404: TRANSACTION FAILED</div>
+
+        <!-- Terminal Box -->
+        <div class="error-terminal">
+          <div class="error-terminal-inner">
+            <span class="error-term-prompt">root@sys:~#</span> <span class="error-term-cmd">diagnose --last</span>
+            <br>
+            <span class="error-term-green">&gt;&gt; CRITICAL FAILURE</span>
+            <br>
+            <span class="error-term-gray">--------------------------</span>
+            <br>
+            <span class="error-term-text">System failure detected. The gateway refused the connection.</span>
+            <br>
+            <span class="error-term-green">&gt; Error_Code: 0xFF_CRITICAL</span>
+            <br>
+            <span class="error-term-green">&gt; Timestamp: 12:04:99</span>
+            <br>
+            <span class="error-term-gray">--------------------------</span>
+            <br>
+            <span class="error-term-cursor">_</span>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="error-actions">
+          <button class="error-retry-btn" onclick="showPage('wallet')">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M23 4v6h-6"/><path d="M20.49 15a9 9 0 11-2.12-9.36L23 10"/>
+            </svg>
+            RETRY OPERATION
+          </button>
+          <button class="error-support-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+              <circle cx="12" cy="2" r="0"/>
+              <path d="M3 18v-2a3 3 0 013-3M21 18v-2a3 3 0 00-3-3"/>
+              <path d="M3 18a2 2 0 002 2h2M21 18a2 2 0 01-2 2h-2"/>
+            </svg>
+            CONTACT SUPPORT
+          </button>
+        </div>
+
+        <!-- Glitch Bar -->
+        <div class="error-glitch-bar">
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SUCCESS PAGE ==================== -->
+  <div class="page" id="page-success">
+    <div class="success-page">
+      <!-- Decorative Elements -->
+      <div class="success-decor-cross">+</div>
+      <div class="success-decor-diamond">&#9670;</div>
+
+      <!-- Pixel Checkmark -->
+      <div class="success-icon">
+        <div class="success-pixel-check">
+          <div class="px" style="grid-column:4;grid-row:1;"></div>
+          <div class="px" style="grid-column:5;grid-row:1;"></div>
+          <div class="px" style="grid-column:3;grid-row:2;"></div>
+          <div class="px" style="grid-column:4;grid-row:2;"></div>
+          <div class="px" style="grid-column:5;grid-row:2;"></div>
+          <div class="px" style="grid-column:6;grid-row:2;"></div>
+          <div class="px" style="grid-column:2;grid-row:3;"></div>
+          <div class="px" style="grid-column:3;grid-row:3;"></div>
+          <div class="px" style="grid-column:6;grid-row:3;"></div>
+          <div class="px" style="grid-column:7;grid-row:3;"></div>
+          <div class="px" style="grid-column:1;grid-row:4;"></div>
+          <div class="px" style="grid-column:2;grid-row:4;"></div>
+          <div class="px" style="grid-column:7;grid-row:4;"></div>
+          <div class="px" style="grid-column:1;grid-row:5;"></div>
+          <div class="px" style="grid-column:2;grid-row:5;"></div>
+        </div>
+      </div>
+
+      <!-- Title -->
+      <div class="success-title-wrap">
+        <h1 class="success-title">TRANSACTION<br>SECURED</h1>
+        <h1 class="success-title-shadow">TRANSACTION<br>SECURED</h1>
+      </div>
+
+      <!-- Receipt Card -->
+      <div class="success-receipt-wrap">
+        <div class="success-receipt-arrow success-receipt-arrow-tl">&#9654;</div>
+        <div class="success-receipt-arrow success-receipt-arrow-bl">&#9654;</div>
+        <div class="success-receipt">
+          <div class="success-receipt-header">
+            <span class="success-receipt-label">RECEIPT_NO</span>
+            <span class="success-receipt-id">#X99-2024</span>
+          </div>
+          <div class="success-receipt-divider"></div>
+          <div class="success-receipt-field">
+            <span class="success-receipt-field-label">PROJECT_REFERENCE</span>
+            <span class="success-receipt-field-value">Neon City Hardware</span>
+          </div>
+          <div class="success-receipt-row">
+            <div class="success-receipt-field">
+              <span class="success-receipt-field-label">TIME_STAMP</span>
+              <span class="success-receipt-field-value">14:02:59 EST</span>
+            </div>
+            <div class="success-receipt-field">
+              <span class="success-receipt-field-label">STATUS</span>
+              <span class="success-status-badge">CONFIRMED</span>
+            </div>
+          </div>
+          <div class="success-receipt-line"></div>
+          <div class="success-receipt-total">
+            <span class="success-receipt-total-label">TOTAL_AMOUNT</span>
+            <span class="success-receipt-total-value">$250.00</span>
+          </div>
+          <div class="success-barcode">
+            <span style="width:4px;height:100%;"></span>
+            <span style="width:2px;height:100%;"></span>
+            <span style="width:6px;height:80%;"></span>
+            <span style="width:2px;height:100%;"></span>
+            <span style="width:8px;height:100%;"></span>
+            <span style="width:3px;height:60%;"></span>
+            <span style="width:12px;height:100%;"></span>
+            <span style="width:2px;height:100%;"></span>
+            <span style="width:6px;height:90%;"></span>
+            <span style="width:4px;height:100%;"></span>
+            <span style="width:3px;height:70%;"></span>
+            <span style="width:8px;height:100%;"></span>
+            <span style="width:2px;height:100%;"></span>
+            <span style="width:4px;height:80%;"></span>
+            <span style="width:10px;height:100%;"></span>
+            <span style="width:3px;height:100%;"></span>
+            <span style="width:6px;height:60%;"></span>
+            <span style="width:2px;height:100%;"></span>
+            <span style="width:8px;height:90%;"></span>
+            <span style="width:4px;height:100%;"></span>
+          </div>
+        </div>
+        <div class="success-receipt-notch"></div>
+      </div>
+
+      <!-- Back Button -->
+      <button class="success-back-btn" onclick="showPage('dashboard')">BACK TO HUB</button>
+      <div class="success-footer">PROCESSING COMPLETE // SESSION CLOSED</div>
+    </div>
+  </div>
+
+  <!-- ==================== SEARCH PAGE ==================== -->
+  <div class="page" id="page-search">
+    <div class="search-page">
+      <!-- Top Bar -->
+      <div class="search-topbar">
+        <button class="search-back-btn" onclick="showPage('explore')">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+        </button>
+        <div class="search-mode-badge">MODE: SEARCH_V1</div>
+        <button class="search-menu-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Search Layout -->
+      <div class="search-layout">
+        <!-- Left: Main -->
+        <div class="search-main">
+          <!-- Search Header -->
+          <div class="search-header">
+            <div class="search-title-wrap">
+              <h1 class="search-title">SEARCH PROJECTS</h1>
+              <div class="search-title-underline">
+                <span class="search-dot-left"></span>
+                <span class="search-dot-right"></span>
+              </div>
+            </div>
+            <div class="search-ready">READY FOR INPUT...</div>
+          </div>
+
+          <!-- Input Field (desktop) -->
+          <div class="search-input-section">
+            <div class="search-input-wrap">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+              <input type="text" class="search-input" placeholder="TYPE QUERY...">
+              <button class="search-go-btn">GO</button>
+            </div>
+          </div>
+
+          <!-- Popular Searches -->
+          <div class="search-popular">
+            <h3 class="search-section-title">
+              <span class="search-section-icon">//</span> POPULAR_SEARCHES
+            </h3>
+            <div class="search-tags">
+              <button class="search-tag">#TECH</button>
+              <button class="search-tag search-tag-active">#CRYPTO</button>
+              <button class="search-tag">#ART</button>
+              <button class="search-tag">#ECO-HOMES</button>
+              <button class="search-tag">#GADGETS</button>
+              <button class="search-tag">#DEFI</button>
+            </div>
+          </div>
+
+          <!-- Recent History -->
+          <div class="search-history">
+            <div class="search-history-label">RECENT_HISTORY</div>
+            <div class="search-history-divider"></div>
+            <div class="search-history-item">
+              <span class="search-history-text">MODULAR BACKPACKS</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+            <div class="search-history-item">
+              <span class="search-history-text">SOLAR PANEL KIT V2</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+            <div class="search-history-item">
+              <span class="search-history-text">URBAN FARMING COLLECTIVE</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Keyboard Visual (desktop decoration) -->
+        <div class="search-sidebar">
+          <div class="search-keyboard">
+            <div class="search-kb-row">
+              <span class="search-key">Q</span><span class="search-key">W</span><span class="search-key">E</span>
+              <span class="search-key">R</span><span class="search-key">T</span><span class="search-key">Y</span>
+              <span class="search-key">U</span><span class="search-key">I</span><span class="search-key">O</span>
+              <span class="search-key">P</span>
+            </div>
+            <div class="search-kb-row">
+              <span class="search-key">A</span><span class="search-key">S</span><span class="search-key">D</span>
+              <span class="search-key">F</span><span class="search-key">G</span><span class="search-key">H</span>
+              <span class="search-key">J</span><span class="search-key">K</span><span class="search-key">L</span>
+            </div>
+            <div class="search-kb-row">
+              <span class="search-key search-key-shift">&#8679;</span>
+              <span class="search-key">Z</span><span class="search-key">X</span><span class="search-key">C</span>
+              <span class="search-key">V</span><span class="search-key">B</span><span class="search-key">N</span>
+              <span class="search-key">M</span>
+              <span class="search-key search-key-del">&#9003;</span>
+            </div>
+            <div class="search-kb-row">
+              <span class="search-key search-key-num">123</span>
+              <span class="search-key search-key-space">SPACE</span>
+              <span class="search-key search-key-go">GO</span>
+            </div>
+          </div>
+          <div class="search-sidebar-info">
+            <div class="search-sidebar-card">
+              <div class="search-sidebar-label">INDEXED PROJECTS</div>
+              <div class="search-sidebar-value">2,847</div>
+            </div>
+            <div class="search-sidebar-card">
+              <div class="search-sidebar-label">CATEGORIES</div>
+              <div class="search-sidebar-value">24</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== FILTERS PAGE ==================== -->
+  <div class="page" id="page-filters">
+    <div class="filters-page">
+      <div class="filters-layout">
+        <!-- Left: Main Filters -->
+        <div class="filters-main">
+          <!-- Header -->
+          <div class="filters-header">
+            <h1 class="filters-title">FILTERS</h1>
+            <button class="filters-close-btn" onclick="showPage('explore')">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+            </button>
+          </div>
+
+          <!-- 01. Sector -->
+          <div class="filters-section">
+            <div class="filters-section-head">
+              <span class="filters-num">01.</span>
+              <span class="filters-section-label">SECTOR</span>
+            </div>
+            <div class="filters-check-list">
+              <label class="filters-check-item">
+                <span class="filters-check-text filters-text-green">TECH</span>
+                <input type="checkbox" class="filters-checkbox">
+                <span class="filters-checkmark"></span>
+              </label>
+              <label class="filters-check-item">
+                <span class="filters-check-text">REAL ESTATE</span>
+                <input type="checkbox" class="filters-checkbox">
+                <span class="filters-checkmark"></span>
+              </label>
+              <label class="filters-check-item">
+                <span class="filters-check-text filters-text-green">CRYPTO</span>
+                <input type="checkbox" class="filters-checkbox">
+                <span class="filters-checkmark"></span>
+              </label>
+              <label class="filters-check-item">
+                <span class="filters-check-text">GREEN ENERGY</span>
+                <input type="checkbox" class="filters-checkbox">
+                <span class="filters-checkmark"></span>
+              </label>
+            </div>
+          </div>
+
+          <!-- 02. Risk Level -->
+          <div class="filters-section">
+            <div class="filters-section-head">
+              <span class="filters-num">02.</span>
+              <span class="filters-section-label">RISK LEVEL</span>
+            </div>
+            <div class="filters-risk-list">
+              <button class="filters-risk-item">
+                <span class="filters-risk-name">LOW</span>
+                <span class="filters-risk-badge">SAFE</span>
+              </button>
+              <button class="filters-risk-item filters-risk-active">
+                <span class="filters-risk-name">MED</span>
+                <span class="filters-risk-badge">BALANCED</span>
+              </button>
+              <button class="filters-risk-item">
+                <span class="filters-risk-name">HIGH</span>
+                <span class="filters-risk-badge">DEGEN</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Apply Button -->
+          <button class="filters-apply-btn">
+            APPLY FILTERS
+            <span class="filters-apply-count">(3)</span>
+          </button>
+
+          <!-- 03. Budget -->
+          <div class="filters-section">
+            <div class="filters-section-head">
+              <span class="filters-num">03.</span>
+              <span class="filters-section-label">BUDGET RANGE</span>
+            </div>
+            <div class="filters-budget-grid">
+              <button class="filters-budget-btn">$100</button>
+              <button class="filters-budget-btn filters-budget-active">$500</button>
+              <button class="filters-budget-btn">$1k</button>
+              <button class="filters-budget-btn">$5k+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Sidebar -->
+        <div class="filters-sidebar">
+          <div class="filters-sidebar-card">
+            <div class="filters-sidebar-label">ACTIVE FILTERS</div>
+            <div class="filters-sidebar-value">3</div>
+          </div>
+          <div class="filters-sidebar-card">
+            <div class="filters-sidebar-label">MATCHING PROJECTS</div>
+            <div class="filters-sidebar-value">147</div>
+          </div>
+          <div class="filters-sidebar-card">
+            <div class="filters-sidebar-label">AVG. RETURN</div>
+            <div class="filters-sidebar-value">+18.4%</div>
+          </div>
+          <div class="filters-sidebar-preview">
+            <div class="filters-sidebar-label">FILTER PREVIEW</div>
+            <div class="filters-preview-bar">
+              <div class="filters-preview-fill" style="width: 62%;"></div>
+            </div>
+            <div class="filters-preview-meta">
+              <span>147 / 2,847 PROJECTS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== NOTIFICATIONS PAGE ==================== -->
+  <div class="page" id="page-notifications">
+    <div class="notif-page">
+      <div class="notif-layout">
+        <!-- Left: Feed -->
+        <div class="notif-main">
+          <!-- Header -->
+          <div class="notif-header">
+            <div>
+              <h1 class="notif-title">FEED // LOG</h1>
+              <div class="notif-subtitle">PORTFOLIO TRACKING // V.3.4</div>
+            </div>
+            <button class="notif-settings-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="notif-divider"></div>
+
+          <!-- Filter Tabs -->
+          <div class="notif-tabs">
+            <button class="notif-tab notif-tab-outline">ALL</button>
+            <button class="notif-tab notif-tab-filled">YIELDS</button>
+            <button class="notif-tab notif-tab-filled">UPDATES</button>
+            <button class="notif-tab notif-tab-filled">ALERTS</button>
+          </div>
+
+          <!-- Today Group -->
+          <div class="notif-date-group">
+            <div class="notif-date-label">
+              <span class="notif-date-dot" style="background:#cc0000;"></span>
+              TODAY [24 OCT]
+            </div>
+          </div>
+
+          <!-- Yield Card -->
+          <div class="notif-card">
+            <div class="notif-card-header notif-header-green">
+              <span>YIELD</span>
+              <span>$</span>
+            </div>
+            <div class="notif-card-body">
+              <h3 class="notif-card-title">Alpha Fund Q3 Yield</h3>
+              <p class="notif-card-desc">Quarterly return distribution received.</p>
+              <div class="notif-card-footer">
+                <span class="notif-time-badge">09:42 AM</span>
+                <span class="notif-card-amount notif-amount-green">+$450.00</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- New Listing Card -->
+          <div class="notif-card">
+            <div class="notif-card-header notif-header-red">
+              <span>NEW LISTING</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L4 14h5v8l7-12h-5z"/></svg>
+            </div>
+            <div class="notif-card-body notif-card-body-row">
+              <div class="notif-card-thumb"></div>
+              <div class="notif-card-info">
+                <h3 class="notif-card-title">URBAN VERTICAL FARM</h3>
+                <p class="notif-card-desc">Trading window is now open for public access.</p>
+                <div class="notif-card-footer">
+                  <span class="notif-time-badge">08:15 AM</span>
+                  <button class="notif-action-btn">INVESTIGATE</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Required Card -->
+          <div class="notif-card">
+            <div class="notif-card-header notif-header-orange">
+              <span>ACTION REQ.</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13" stroke="white" stroke-width="2"/><circle cx="12" cy="17" r="1" fill="white"/></svg>
+            </div>
+            <div class="notif-card-body">
+              <h3 class="notif-card-title">Verify Identity</h3>
+              <p class="notif-card-desc">Your KYC documents for Series B position need renewal before 28 Oct.</p>
+              <div class="notif-card-footer">
+                <span class="notif-time-badge">07:30 AM</span>
+                <button class="notif-action-btn">UPLOAD</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Yesterday Group -->
+          <div class="notif-date-group">
+            <div class="notif-date-label">
+              <span class="notif-date-dot" style="background:var(--gray);"></span>
+              YESTERDAY [23 OCT]
+            </div>
+          </div>
+
+          <!-- Update Card -->
+          <div class="notif-card">
+            <div class="notif-card-header notif-header-dark">
+              <span>UPDATE</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <div class="notif-card-body">
+              <h3 class="notif-card-title">Q3 Report: Solar Grid</h3>
+              <p class="notif-card-desc">Quarterly performance report is now available for download.</p>
+              <div class="notif-card-footer">
+                <span class="notif-time-badge">14:20 PM</span>
+                <button class="notif-action-btn">READ DOC &gt;</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Alert Card (compact) -->
+          <div class="notif-alert-card">
+            <div class="notif-alert-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/>
+              </svg>
+            </div>
+            <div class="notif-alert-text">
+              <span>Market volatility alert triggered for <span class="notif-alert-highlight">Sector 4</span>.</span>
+              <span class="notif-alert-time">11:05 AM</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Sidebar -->
+        <div class="notif-sidebar">
+          <div class="notif-sidebar-card">
+            <div class="notif-sidebar-label">UNREAD</div>
+            <div class="notif-sidebar-value notif-value-red">5</div>
+          </div>
+          <div class="notif-sidebar-card">
+            <div class="notif-sidebar-label">THIS WEEK</div>
+            <div class="notif-sidebar-value">23</div>
+          </div>
+          <div class="notif-sidebar-card">
+            <div class="notif-sidebar-label">YIELDS EARNED</div>
+            <div class="notif-sidebar-value notif-value-green">+$1,230.00</div>
+          </div>
+          <div class="notif-sidebar-card">
+            <div class="notif-sidebar-label">PENDING ACTIONS</div>
+            <div class="notif-sidebar-value notif-value-orange">2</div>
+          </div>
+          <div class="notif-sidebar-card notif-sidebar-log">
+            <div class="notif-sidebar-label">SYSTEM LOG</div>
+            <div class="notif-log-line"><span class="notif-log-time">12:00</span> SYNC COMPLETE</div>
+            <div class="notif-log-line"><span class="notif-log-time">11:45</span> DATA REFRESH</div>
+            <div class="notif-log-line"><span class="notif-log-time">11:30</span> MARKET SCAN</div>
+            <div class="notif-log-line"><span class="notif-log-time">11:05</span> ALERT FIRED</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 16: NEWS -->
+  <div class="page" id="page-news">
+    <div class="news-page">
+      <div class="news-layout">
+
+        <!-- Left: Main Content -->
+        <div class="news-main">
+
+          <!-- Header -->
+          <div class="news-header">
+            <div class="news-header-left">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 22h16a2 2 0 002-2V4a2 2 0 00-2-2H8a2 2 0 00-2 2v16a2 2 0 01-2 2zm0 0a2 2 0 01-2-2v-9c0-1.1.9-2 2-2h2"/><line x1="10" y1="6" x2="18" y2="6"/><line x1="10" y1="10" x2="18" y2="10"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+              <div>
+                <h1 class="news-title">NEWS // UPDATES</h1>
+                <div class="news-subtitle">REAL-TIME MARKET INTELLIGENCE // V.2.1</div>
+              </div>
+            </div>
+            <div class="news-live-badge">
+              <span class="news-live-dot"></span>
+              [ LIVE ]
+            </div>
+          </div>
+
+          <!-- Hero Section -->
+          <div class="news-hero">
+            <div class="news-hero-overlay"></div>
+            <div class="news-hero-content">
+              <span class="news-hero-tag">DAILY BRIEFING</span>
+              <h2 class="news-hero-title">MARKET<br>SURGE</h2>
+              <div class="news-hero-echo">MARKET SURGE</div>
+            </div>
+          </div>
+
+          <!-- Story Preview -->
+          <div class="news-story-preview">
+            <div class="news-story-border"></div>
+            <div class="news-story-content">
+              <h2 class="news-story-headline">TRADING VOLUME HITS RECORD HIGH IN Q3 DRIVEN BY TECH SECTOR VOLATILITY.</h2>
+              <a href="#" class="news-story-link">READ FULL STORY</a>
+            </div>
+          </div>
+
+          <!-- Breaking News Ticker -->
+          <div class="news-ticker">
+            <div class="news-ticker-inner">
+              /// BREAKING NEWS: TECH_VEST CLOSED /// SHIPPING DELAYS IN SECTOR 4 /// NEW LISTING: CYBERDECK V2 /// MARKET CAP +12% /// BREAKING NEWS: TECH_VEST CLOSED /// SHIPPING DELAYS IN SECTOR 4 /// NEW LISTING: CYBERDECK V2 /// MARKET CAP +12% ///&nbsp;&nbsp;&nbsp;
+              /// BREAKING NEWS: TECH_VEST CLOSED /// SHIPPING DELAYS IN SECTOR 4 /// NEW LISTING: CYBERDECK V2 /// MARKET CAP +12% /// BREAKING NEWS: TECH_VEST CLOSED /// SHIPPING DELAYS IN SECTOR 4 /// NEW LISTING: CYBERDECK V2 /// MARKET CAP +12% ///
+            </div>
+          </div>
+
+          <!-- Stats Row -->
+          <div class="news-stats-row">
+            <div class="news-stat">
+              <div class="news-stat-label">VOL</div>
+              <div class="news-stat-value">24M</div>
+              <div class="news-stat-change news-stat-green">+12%</div>
+            </div>
+            <div class="news-stat">
+              <div class="news-stat-label">TREND</div>
+              <div class="news-stat-value">UP</div>
+              <div class="news-stat-change news-stat-hot">HOT</div>
+            </div>
+            <div class="news-stat">
+              <div class="news-stat-label">CAP</div>
+              <div class="news-stat-value">98%</div>
+              <div class="news-stat-change news-stat-green">+2%</div>
+            </div>
+          </div>
+
+          <!-- Telex Feed Section -->
+          <div class="news-telex">
+            <div class="news-telex-header">
+              <h2 class="news-telex-title">TELEX FEED</h2>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" opacity="0.35"><path d="M6.18 15.64a2.18 2.18 0 010 4.36 2.18 2.18 0 010-4.36zM4 4.44A15.56 15.56 0 0119.56 20h-2.83A12.73 12.73 0 004 7.27V4.44zm0 5.66a9.9 9.9 0 019.9 9.9h-2.83A7.07 7.07 0 004 12.93v-2.83z"/></svg>
+            </div>
+
+            <!-- Feed Item 1 -->
+            <div class="news-feed-item">
+              <div class="news-feed-meta">
+                <span class="news-feed-date">OCT 24 // 14:02 PM</span>
+                <span class="news-feed-tag news-tag-funded">#CLOSED</span>
+              </div>
+              <h3 class="news-feed-title">PROJ: TECH_VEST // STATUS: COMPLETE</h3>
+              <p class="news-feed-desc">125% target achieved in 48hrs. Execution phase initiated. Shareholder reports sent.</p>
+              <a href="#" class="news-feed-link">READ MORE →</a>
+            </div>
+
+            <!-- Feed Item 2 -->
+            <div class="news-feed-item">
+              <div class="news-feed-meta">
+                <span class="news-feed-date">OCT 24 // 11:30 AM</span>
+                <span class="news-feed-tag news-tag-alert">#ALERT</span>
+              </div>
+              <h3 class="news-feed-title news-title-alert">WARNING: SUPPLY CHAIN HALT</h3>
+              <p class="news-feed-desc">Shipping delays expected for 'SolarBag'. Disruption in Sector 4 logistics hub.</p>
+              <a href="#" class="news-feed-link">READ MORE →</a>
+            </div>
+
+            <!-- Feed Item 3 -->
+            <div class="news-feed-item">
+              <div class="news-feed-meta">
+                <span class="news-feed-date">OCT 23 // 09:15 AM</span>
+                <span class="news-feed-tag news-tag-new">#NEW</span>
+              </div>
+              <h3 class="news-feed-title">LAUNCH: CYBERDECK V2</h3>
+              <p class="news-feed-desc">Early bird tier closing soon. 500 units remaining at intro price.</p>
+              <a href="#" class="news-feed-link">READ MORE →</a>
+            </div>
+
+            <!-- Feed Item 4 -->
+            <div class="news-feed-item">
+              <div class="news-feed-meta">
+                <span class="news-feed-date">OCT 22 // 16:45 PM</span>
+                <span class="news-feed-tag news-tag-update">#UPDATE</span>
+              </div>
+              <h3 class="news-feed-title">SYSTEM MAINTENANCE</h3>
+              <p class="news-feed-desc">Scheduled downtime for server upgrades. 02:00 UTC - 04:00 UTC.</p>
+              <a href="#" class="news-feed-link">READ MORE →</a>
+            </div>
+          </div>
+
+          <!-- End of Transmission -->
+          <div class="news-eot">
+            <span>END OF TRANSMISSION</span>
+            <span class="news-eot-dashes">---</span>
+          </div>
+
+        </div>
+
+        <!-- Right: Sidebar -->
+        <div class="news-sidebar">
+          <!-- Live Stats -->
+          <div class="news-side-card">
+            <div class="news-side-label">LIVE VIEWERS</div>
+            <div class="news-side-value">1,247</div>
+          </div>
+          <div class="news-side-card">
+            <div class="news-side-label">ARTICLES TODAY</div>
+            <div class="news-side-value">12</div>
+          </div>
+          <div class="news-side-card">
+            <div class="news-side-label">MARKET STATUS</div>
+            <div class="news-side-value news-side-green">OPEN</div>
+          </div>
+
+          <!-- Trending Topics -->
+          <div class="news-side-card news-side-trending">
+            <div class="news-side-label">TRENDING TOPICS</div>
+            <div class="news-trending-item">
+              <span class="news-trending-rank">01</span>
+              <span>TECH_VEST</span>
+              <span class="news-trending-hot">CLOSED</span>
+            </div>
+            <div class="news-trending-item">
+              <span class="news-trending-rank">02</span>
+              <span>SOLARBAG</span>
+              <span class="news-trending-alert">ALERT</span>
+            </div>
+            <div class="news-trending-item">
+              <span class="news-trending-rank">03</span>
+              <span>CYBERDECK V2</span>
+              <span class="news-trending-new">NEW</span>
+            </div>
+            <div class="news-trending-item">
+              <span class="news-trending-rank">04</span>
+              <span>SOLAR GRID</span>
+              <span class="news-trending-up">+8%</span>
+            </div>
+          </div>
+
+          <!-- Wire Log -->
+          <div class="news-side-card news-side-wire">
+            <div class="news-side-label">WIRE // LATEST</div>
+            <div class="news-wire-line"><span class="news-wire-time">14:02</span> TECH_VEST 125% CLOSED</div>
+            <div class="news-wire-line"><span class="news-wire-time">13:45</span> SECTOR 4 SUPPLY HALT</div>
+            <div class="news-wire-line"><span class="news-wire-time">12:30</span> CYBERDECK V2 LAUNCH</div>
+            <div class="news-wire-line"><span class="news-wire-time">11:15</span> MARKET INDEX +3.2%</div>
+            <div class="news-wire-line"><span class="news-wire-time">10:00</span> Q3 REPORT RELEASED</div>
+            <div class="news-wire-line"><span class="news-wire-time">09:30</span> SESSION OPEN</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
