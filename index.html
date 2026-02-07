@@ -100,164 +100,171 @@
       <div class="scanlines"></div>
       <div class="welcome-noise"></div>
 
-      <div class="corner-mark tl">[ 0,0 ]</div>
-      <div class="corner-mark tr">[ 1920,0 ]</div>
-      <div class="corner-mark bl">[ 0,1080 ]</div>
-      <div class="corner-mark br">[ 1920,1080 ]</div>
-
-      <!-- Brutal Header Strip -->
       <div class="welcome-strip">
         <div class="welcome-strip-left">
           <span class="welcome-strip-dot"></span>
-          SYS_ONLINE
+          REAL-TIME CORE ONLINE
         </div>
-        <div class="welcome-strip-center">CAPITAL_PF // TERMINAL V.02</div>
+        <div class="welcome-strip-center">CAPITAL_PF // COMMAND BRIDGE V3</div>
         <div class="welcome-strip-right">
-          <span>SESSION: <span style="color: var(--green);">ACTIVE</span></span>
-          <span>LATENCY: 4MS</span>
-          <span>NODE: EU-WEST</span>
+          <span>MARKET: GLOBAL</span>
+          <span>SYNC: 99.99%</span>
+          <span class="welcome-strip-green">AUTH: VERIFIED</span>
         </div>
       </div>
 
-      <div class="welcome-content">
-        <div class="welcome-left">
-
-          <!-- Glitch Title -->
+      <div class="welcome-shell">
+        <section class="welcome-hero">
           <div class="welcome-pretitle">
             <span class="welcome-line-accent"></span>
-            FINANCIAL OPERATING SYSTEM
+            INVESTMENT CONTROL LAYER
           </div>
 
-          <h1 class="welcome-title" data-text="TRADE PORTFOLIO">
-            <span>TRADE</span>
-            <span class="t-green">PORT</span>
-            <span class="t-outline">FOLIO</span>
+          <h1 class="welcome-title">
+            <span>OWN</span>
+            <span class="t-green">YOUR</span>
+            <span class="t-outline">MOMENTUM</span>
           </h1>
 
-          <div class="welcome-title-echo">TRADE PORTFOLIO</div>
-
           <p class="welcome-subtitle">
-            ACCESS YOUR PORTFOLIO DASHBOARD.<br>
-            TRACK ASSETS. ANALYZE RETURNS.<br>
-            MAXIMIZE YOUR GROWTH POTENTIAL.
+            Monitor capital, rebalance risk, and execute your next move with a single tactical view.
+            Signals, allocation shifts, and position health are streamed in real time.
           </p>
 
-          <!-- Brutal Stats Inline -->
-          <div class="welcome-brutal-stats">
-            <div class="welcome-brutal-stat">
-              <div class="welcome-brutal-stat-val">$2.4B</div>
-              <div class="welcome-brutal-stat-label">TOTAL VOLUME</div>
-            </div>
-            <div class="welcome-brutal-stat-divider"></div>
-            <div class="welcome-brutal-stat">
-              <div class="welcome-brutal-stat-val" style="color: var(--green);">+18.3%</div>
-              <div class="welcome-brutal-stat-label">AVG RETURN</div>
-            </div>
-            <div class="welcome-brutal-stat-divider"></div>
-            <div class="welcome-brutal-stat">
-              <div class="welcome-brutal-stat-val">24/7</div>
-              <div class="welcome-brutal-stat-label">UPTIME</div>
-            </div>
+          <div class="welcome-signal-strip">
+            <span>12 ACTIVE POSITIONS</span>
+            <span>NET EXPOSURE 63%</span>
+            <span>ALERTS: 2 PRIORITY</span>
           </div>
 
           <div class="welcome-cta">
-            <button class="btn-primary-brutal" onclick="showPage('register')">
-              <span class="btn-brutal-text">START TRACKING</span>
-              <span class="btn-brutal-arrow">→</span>
+            <button class="welcome-btn-primary" onclick="showPage('register')">
+              START TRACKING
             </button>
-            <button class="btn-secondary-brutal" onclick="showPage('login')">
+            <button class="welcome-btn-secondary" onclick="showPage('login')">
               LOG IN
             </button>
           </div>
 
           <div class="welcome-trust-line">
             <span class="welcome-trust-dot"></span>
-            256-BIT ENCRYPTED // BANK-GRADE SECURITY // SOC2 COMPLIANT
+            AES-256 ENCRYPTION // FRAUD MONITORING // LIVE AUDIT TRAIL
+          </div>
+        </section>
+
+        <aside class="welcome-control">
+          <div class="welcome-control-head">
+            <div class="welcome-control-kicker">STRATEGY MODES</div>
+            <div class="welcome-control-note">Tap profile to simulate portfolio stance</div>
           </div>
 
-        </div>
-
-        <div class="welcome-right">
-          <!-- Big Number Display -->
-          <div class="welcome-big-number">
-            <div class="welcome-big-number-label">PORTFOLIO OVERVIEW // Q4</div>
-            <div class="welcome-big-number-value">$84,230</div>
-            <div class="welcome-big-number-change">
-              <span class="welcome-change-up">▲ +124%</span>
-              <span class="welcome-change-period">VS LAST QUARTER</span>
-            </div>
+          <div class="welcome-mode-grid">
+            <button class="welcome-mode-btn active" data-mode="growth">GROWTH</button>
+            <button class="welcome-mode-btn" data-mode="balanced">BALANCED</button>
+            <button class="welcome-mode-btn" data-mode="defensive">DEFENSIVE</button>
           </div>
 
-          <!-- Chart -->
-          <div class="chart-container">
-            <div class="chart-header">
-              <span class="chart-label">PERFORMANCE GRAPH // 6M</span>
-              <div class="chart-live-indicator">
-                <span class="chart-live-dot"></span>
-                LIVE
-              </div>
+          <div class="welcome-focus-card">
+            <div class="welcome-focus-header">
+              <span>ACTIVE PROFILE</span>
+              <span id="welcome-mode-risk">RISK: HIGH</span>
             </div>
-
-            <div class="chart-bars">
-              <div class="chart-bar-group">
-                <div class="chart-bar bar-green" style="height: 40%" data-val="$12K"></div>
-                <span class="chart-bar-label">JAN</span>
+            <h2 id="welcome-mode-title">AGGRESSIVE GROWTH</h2>
+            <div class="welcome-focus-grid">
+              <div>
+                <span>EXPECTED 30D</span>
+                <strong id="welcome-mode-yield">+8.4%</strong>
               </div>
-              <div class="chart-bar-group">
-                <div class="chart-bar bar-green" style="height: 70%" data-val="$28K"></div>
-                <span class="chart-bar-label">FEB</span>
-              </div>
-              <div class="chart-bar-group">
-                <div class="chart-bar bar-red" style="height: 35%" data-val="$10K"></div>
-                <span class="chart-bar-label">MAR</span>
-              </div>
-              <div class="chart-bar-group">
-                <div class="chart-bar bar-green" style="height: 90%" data-val="$42K"></div>
-                <span class="chart-bar-label">APR</span>
-              </div>
-              <div class="chart-bar-group">
-                <div class="chart-bar bar-green" style="height: 75%" data-val="$34K"></div>
-                <span class="chart-bar-label">MAY</span>
-              </div>
-              <div class="chart-bar-group">
-                <div class="chart-bar bar-green" style="height: 55%" data-val="$20K"></div>
-                <span class="chart-bar-label">JUN</span>
+              <div>
+                <span>PRIMARY FOCUS</span>
+                <strong id="welcome-mode-focus">TECH // ENERGY</strong>
               </div>
             </div>
           </div>
-
-          <!-- Stats Grid -->
-          <div class="stats-row">
-            <div class="stat-card">
-              <div class="stat-card-label">POSITIONS</div>
-              <div class="stat-card-value">12</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-card-label">WIN RATE</div>
-              <div class="stat-card-value" style="color: var(--green);">87%</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-card-label">RISK</div>
-              <div class="stat-card-value" style="color: var(--orange);">MED</div>
-            </div>
-          </div>
-
-          <!-- Terminal Log Preview -->
-          <div class="welcome-terminal">
-            <div class="welcome-terminal-line"><span class="wt-green">></span> SYSTEM INITIALIZED...</div>
-            <div class="welcome-terminal-line"><span class="wt-green">></span> CONNECTING TO MARKET FEED...</div>
-            <div class="welcome-terminal-line"><span class="wt-green">></span> 12 ACTIVE POSITIONS LOADED</div>
-            <div class="welcome-terminal-line"><span class="wt-green">></span> PORTFOLIO STATUS: <span class="wt-green">HEALTHY</span></div>
-            <div class="welcome-terminal-line wt-blink"><span class="wt-green">></span> AWAITING INPUT_</div>
-          </div>
-        </div>
+        </aside>
       </div>
 
-      <!-- Brutal Ticker -->
+      <div class="welcome-live-grid">
+        <section class="welcome-panel welcome-performance">
+          <div class="welcome-panel-top">
+            <div>
+              <div class="welcome-panel-kicker">PORTFOLIO SNAPSHOT</div>
+              <h2 class="welcome-panel-title" id="welcome-equity-value">$84,230</h2>
+            </div>
+            <div class="welcome-trend up" id="welcome-equity-change">+12.4% MTD</div>
+          </div>
+
+          <div class="welcome-chart">
+            <div class="welcome-chart-bar-group">
+              <div class="welcome-chart-bar" data-bar-index="0" data-value="+3.2%" data-target="36"></div>
+              <span>JAN</span>
+            </div>
+            <div class="welcome-chart-bar-group">
+              <div class="welcome-chart-bar" data-bar-index="1" data-value="+5.8%" data-target="58"></div>
+              <span>FEB</span>
+            </div>
+            <div class="welcome-chart-bar-group">
+              <div class="welcome-chart-bar" data-bar-index="2" data-value="-1.4%" data-target="28"></div>
+              <span>MAR</span>
+            </div>
+            <div class="welcome-chart-bar-group">
+              <div class="welcome-chart-bar" data-bar-index="3" data-value="+8.1%" data-target="78"></div>
+              <span>APR</span>
+            </div>
+            <div class="welcome-chart-bar-group">
+              <div class="welcome-chart-bar" data-bar-index="4" data-value="+6.7%" data-target="67"></div>
+              <span>MAY</span>
+            </div>
+            <div class="welcome-chart-bar-group">
+              <div class="welcome-chart-bar" data-bar-index="5" data-value="+4.5%" data-target="49"></div>
+              <span>JUN</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="welcome-panel welcome-metrics">
+          <div class="welcome-metric">
+            <span>LATENCY</span>
+            <strong data-live-metric="latency">04MS</strong>
+          </div>
+          <div class="welcome-metric">
+            <span>ACTIVE USERS</span>
+            <strong data-live-metric="users">1,248</strong>
+          </div>
+          <div class="welcome-metric">
+            <span>FILLS / MIN</span>
+            <strong data-live-metric="fills">324</strong>
+          </div>
+          <div class="welcome-metric">
+            <span>UPTIME</span>
+            <strong>99.97%</strong>
+          </div>
+          <div class="welcome-metric">
+            <span>ALERT MODE</span>
+            <strong>SMART</strong>
+          </div>
+          <div class="welcome-metric">
+            <span>AUTO HEDGE</span>
+            <strong>ENABLED</strong>
+          </div>
+        </section>
+
+        <section class="welcome-panel welcome-terminal-panel">
+          <div class="welcome-panel-kicker">EXECUTION LOG</div>
+          <div class="welcome-terminal" id="welcome-terminal-feed">
+            <div class="welcome-terminal-line"><span class="wt-green">></span> BOOTSTRAP COMPLETE</div>
+            <div class="welcome-terminal-line"><span class="wt-green">></span> MARKET DATA STREAM VERIFIED</div>
+            <div class="welcome-terminal-line"><span class="wt-green">></span> WATCHLIST SYNCHRONIZED (42 SYMBOLS)</div>
+            <div class="welcome-terminal-line"><span class="wt-green">></span> RISK ENGINE STATUS: <span class="wt-green">STABLE</span></div>
+            <div class="welcome-terminal-line wt-blink"><span class="wt-green">></span> WAITING FOR NEXT EVENT...</div>
+          </div>
+        </section>
+      </div>
+
       <div class="welcome-bottom-ticker">
         <div class="ticker-track">
-          /// TRADE /// GROW /// HEDGE /// TRACK /// BUILD /// EARN /// TRADE /// GROW /// HEDGE /// TRACK /// BUILD /// EARN /// TRADE /// GROW /// HEDGE /// TRACK /// BUILD /// EARN /// TRADE /// GROW /// HEDGE /// TRACK /// BUILD /// EARN ///&nbsp;&nbsp;&nbsp;
-          /// TRADE /// GROW /// HEDGE /// TRACK /// BUILD /// EARN /// TRADE /// GROW /// HEDGE /// TRACK /// BUILD /// EARN /// TRADE /// GROW /// HEDGE /// TRACK /// BUILD /// EARN /// TRADE /// GROW /// HEDGE /// TRACK /// BUILD /// EARN ///
+          /// ALPHA SIGNALS /// RISK CONTROL /// INSTANT EXECUTION /// SMART REBALANCE /// MULTI-ASSET COVERAGE /// ALPHA SIGNALS /// RISK CONTROL /// INSTANT EXECUTION /// SMART REBALANCE /// MULTI-ASSET COVERAGE ///&nbsp;&nbsp;&nbsp;
+          /// ALPHA SIGNALS /// RISK CONTROL /// INSTANT EXECUTION /// SMART REBALANCE /// MULTI-ASSET COVERAGE /// ALPHA SIGNALS /// RISK CONTROL /// INSTANT EXECUTION /// SMART REBALANCE /// MULTI-ASSET COVERAGE ///
         </div>
       </div>
     </div>
